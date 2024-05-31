@@ -5,7 +5,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from "./App";
-import Show from '/Users/madelinesimpson/ThemInUniform/client/src/components/Show.jsx'
 import "./index.css";
 
 const router = createBrowserRouter([
