@@ -12,13 +12,21 @@
     }
     
     a {
-        text-decoration: none;
+        text-decoration: underline;
         color: white;
+        text-decoration-thickness: 2px;
+        text-decoration-color: white;
+    }
+
+    a:hover {
+        filter: brightness(0.9);
     }
 
     .comingsoon {
         z-index: 3;
-        font-size: 20px;
+        font-size: 15px;
+        text-align: center;
+        line-height: 50px;
     }
 
     .extra {
@@ -44,13 +52,17 @@
     }
     
     a {
-        text-decoration: none;
+        text-decoration: underline;
         color: white;
+        text-decoration-thickness: 2px;
+        text-decoration-color: white;
     }
 
     .comingsoon {
         z-index: 3;
-        font-size: 17px;
+        font-size: 13px;
+        text-align: center;
+        line-height: 40px;
     }
 
     .extra {
@@ -75,13 +87,17 @@
     }
     
     a {
-        text-decoration: none;
+        text-decoration: underline;
         color: white;
+        text-decoration-thickness: 2px;
+        text-decoration-color: white;
     }
 
     .comingsoon {
         z-index: 3;
-        font-size: 15px;
+        font-size: 10px;
+        text-align: center;
+        line-height: 40px;
     }
 
     .extra {
@@ -106,8 +122,10 @@
     }
     
     a {
-        text-decoration: none;
+        text-decoration: underline;
         color: white;
+        text-decoration-thickness: 1px;
+        text-decoration-color: white;
     }
 
     .comingsoon {
@@ -137,13 +155,17 @@
     }
     
     a {
-        text-decoration: none;
+        text-decoration: underline;
         color: white;
+        text-decoration-thickness: 1px;
+        text-decoration-color: white;
     }
 
     .comingsoon {
         z-index: 3;
-        font-size: 10px;
+        font-size: 8px;
+        text-align: center;
+        line-height: 40px;
     }
 
     .extra {
@@ -168,13 +190,17 @@
     }
     
     a {
-        text-decoration: none;
+        text-decoration: underline;
         color: white;
+        text-decoration-thickness: 1px;
+        text-decoration-color: white;
     }
 
     .comingsoon {
         z-index: 3;
         font-size: 10px;
+        text-align: center;
+        line-height: 40px;
     }
 
     .extra {

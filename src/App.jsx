@@ -1,5 +1,5 @@
 import './App.css'
-import Background from './components/Background'
+import Background from './Background'
 
 function App() {
 

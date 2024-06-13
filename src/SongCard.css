@@ -13,6 +13,7 @@
     
     .card:hover {
         cursor: pointer;
+        filter: brightness(0.95);
     }
     
     .songcover {
@@ -46,7 +47,8 @@
     }
     
     .card:hover {
-        cursor: pointer;
+        cursor: pointer;   
+        filter: brightness(0.95);
     }
     
     .songcover {
@@ -80,6 +82,7 @@
     
     .card:hover {
         cursor: pointer;
+        filter: brightness(0.95);
     }
     
     .songcover {
@@ -116,6 +119,7 @@
     
     .card:hover {
         cursor: pointer;
+        filter: brightness(0.95);
     }
     
     .songcover {
@@ -152,6 +156,7 @@
     
     .card:hover {
         cursor: pointer;
+        filter: brightness(0.95);
     }
     
     .songcover {
@@ -188,6 +193,7 @@
     
     .card:hover {
         cursor: pointer;
+        filter: brightness(0.95);
     }
     
     .songcover {

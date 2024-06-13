@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '/Users/madelinesimpson/ThemInUniform/client/src/Show.css';
+import './Show.css';
 
 export default function Show () {
     const [data, setData] = useState([]);
@@ -11,6 +11,7 @@ export default function Show () {
       return fetch('https://rest.bandsintown.com/artists/Them%20In%20Uniform/events/?app_id=6547b3d6872e40dbf0629ec229214368&date=past')
         .then((res) => res.json())
         .then((data) => setData(data))
+        .then(console.log(data))
     }
 
     useEffect(() => {
@@ -23,7 +24,8 @@ export default function Show () {
       return (
         <>
           <div className = "comingsoon">
-            <h1>Show announcments coming soon</h1>
+            <h1>We don't have any upcoming shows right now :( <br/> Check back soon for updates
+            </h1>
           </div>
         </>
       )

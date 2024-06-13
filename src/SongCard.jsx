@@ -1,4 +1,4 @@
-import '/Users/madelinesimpson/ThemInUniform/client/src/SongCard.css';
+import './SongCard.css';
 
 export default function SongCard (props) {
     return (
