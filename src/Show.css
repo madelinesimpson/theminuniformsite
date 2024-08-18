@@ -163,7 +163,7 @@
 
     .comingsoon {
         z-index: 3;
-        font-size: 8px;
+        font-size: 7px;
         text-align: center;
         line-height: 40px;
     }
@@ -198,9 +198,9 @@
 
     .comingsoon {
         z-index: 3;
-        font-size: 10px;
+        font-size: 6px;
         text-align: center;
-        line-height: 40px;
+        line-height: 25px;
     }
 
     .extra {

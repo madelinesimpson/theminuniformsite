@@ -20,7 +20,10 @@ import spotify from './assets/Spotify.png'
 import apple from './assets/Apple.png'
 import React, { useState } from 'react'
 import SongCard from './SongCard.jsx'
-import pictureFrame from './assets/picture frame.png'
+import pictureFrame from './assets/pixel frame.png'
+import contact from './assets/contact.png'
+import subscribe from './assets/subscribe.png'
+import plane from './assets/plane.png'
 import Show from './Show.jsx'
 import { render } from 'react-dom'
 
@@ -29,6 +32,7 @@ export default function Background () {
     const [toggle, setToggle] = useState(true);
     const [showstoggle, setShowsToggle] = useState(true);
     const [abouttoggle, setAboutToggle] = useState(true);
+    const [contacttoggle, setContactToggle] = useState(true);
     const [classNamesOG, setClassNamesOG] = useState("");
     const [classNamesReverse, setClassNamesReverse] = useState("");
     const [classNamesCloud, setClassNamesCloud] = useState("");
@@ -60,6 +64,16 @@ export default function Background () {
         }
         else {
             setAboutToggle(false);
+        }
+        dimBG();
+    };
+
+    const contactPopup = () => {
+        if(contacttoggle==false) {
+            setContactToggle(true);
+        }
+        else {
+            setContactToggle(false);
         }
         dimBG();
     };
@@ -97,6 +111,7 @@ export default function Background () {
             <div className="blueBG"></div>
             <div className={`title ${classNamesOG} ${classNamesDim}`}>
                 <img className="titleImg" src={title}/>
+                {/*<img className={`plane ${classNamesCloud}`} src={plane}/>*/}
             </div>
             <div className={`cloud ${classNamesDim}`}>
                 <img className={`cloudimg1 ${classNamesCloud}`} src={cloudOne}/>
@@ -113,16 +128,19 @@ export default function Background () {
                     <SongCard coverUrl={ltjPic} songtitle="A Letter to Jack" link="https://hypeddit.com/theminuniform/alettertojack"/>
                     <SongCard coverUrl={mystery} songtitle="Heart Tattoo" />
                     <SongCard coverUrl={mystery} songtitle="First of Many" />
-                    <SongCard coverUrl={mystery} songtitle="Rearview Sunset" />
                     <SongCard coverUrl={mystery} songtitle="Raisins" />
                 </div>
                 <img className="exit" src={exit} onClick={musicPopup}/>
             </div>
             <div id="showsWindow" style={{ display: showstoggle ? 'none' : 'flex' }}>
                 <div id="rectangle"><h1 className="inventory">Shows Inventory</h1></div>
+                <div className="biggerWrapper">
                 <img className="showsFrame" src={settings}/>
-                <div className="showsList">
-                   <Show />
+                <div className="showsWrapper">          
+                    <div className="showsList">
+                        <Show />
+                    </div>
+                </div>  
                 </div>
                 <img className="exitShow" src={exit} onClick={showsPopup}/>
             </div>
@@ -138,17 +156,33 @@ export default function Background () {
                 </div>
                 <img className="exitAbout" src={exit} onClick={aboutPopup}/>
             </div>
-            <div className={`music ${classNamesOG}`}>
+            <div id="contactWindow" style={{display: contacttoggle ? 'none' : 'flex'}}>
+                <img className="contactFrame" src={settings}/>
+                <div className="contactInfo">
+                    <h1>Email for information and booking:
+                    <br></br>
+                    contact@theminuniform.com
+                    </h1>
+                    <h2>(We also respond to Instagram DMs @theminuniform)</h2>
+                </div>
+                <img className="exitContact" src={exit} onClick={contactPopup}/>
+            </div>
+            <div className={`music ${classNamesOG} ${classNamesDim}`}>
                 <img className="musicimg" src={music} onClick={musicPopup}/>
             </div>
-            <div className={`shop ${classNamesOG}`}>
-                <img className="shopimg" src={shop}/>
-            </div>
-            <div className={`shows ${classNamesOG}`}>
+            <div className={`shows ${classNamesOG} ${classNamesDim}`}>
                 <img className="showsimg" src={shows} onClick={showsPopup}/>
             </div>
-            <div className={`about ${classNamesOG}`}>
+            <div className={`about ${classNamesOG} ${classNamesDim}`}>
                 <img className="aboutimg" src={about} onClick={aboutPopup}/>
+            </div>
+            <div className={`contact ${classNamesOG} ${classNamesDim}`}>
+                <img className="contactimg" src={contact} onClick={contactPopup}/>
+            </div>
+            <div className={`subscribe ${classNamesOG} ${classNamesDim}`}>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScmnhT58EkjcDDn1lKNKMcin7W0SQ3fppac1OoK2cwSv9TN6w/viewform?usp=sf_link" target="_blank">
+                    <img className="subscribeimg" src={subscribe}/>
+                </a>
             </div>
             {/*<div className="arrowSign" onClick={doBoth}>
             </div>*/}
