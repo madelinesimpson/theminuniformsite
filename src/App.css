@@ -15,7 +15,7 @@ body {
 }
 
 .ogBG {
-	background-image: url('./src/assets/sitebg.gif');
+	background-image: url('./assets/sitebg.gif');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -28,7 +28,7 @@ body {
 }
 
 .reverseBG {
-	background-image: url('./src/assets/editedreversebg.png');
+	background-image: url('./assets/editedreversebg.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
