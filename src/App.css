@@ -2,14 +2,20 @@
 @import url('https://fonts.cdnfonts.com/css/common-pixel');
 @import url('https://fonts.googleapis.com/css?family=Rubik Pixels');
 
+body {
+	overflow: hidden;
+}
+
 .App {
 	overflow: hidden;
 	padding: none;
 	margin: none;
+	overscroll-behavior-x: none;
+	overscroll-behavior-y: none;
 }
 
 .ogBG {
-	background-image: url('/Users/madelinesimpson/ThemInUniform/client/src/assets/sitebg.gif');
+	background-image: url('./src/assets/sitebg.gif');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -22,7 +28,7 @@
 }
 
 .reverseBG {
-	background-image: url('/Users/madelinesimpson/ThemInUniform/client/src/assets/editedreversebg.png');
+	background-image: url('./src/assets/editedreversebg.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -144,6 +150,20 @@
 		transform: translateX(-115vw) translateY(-50%);
 	  }
   }
+
+  /*
+
+  @keyframes movePlane {
+	95% {
+		transform: translateX(-120vw) translateY(-50%);
+		overflow: hidden;
+	  }
+	  95.001% {
+		transform: translateX(5vw) translateY(-50%);
+		overflow: hidden;
+	  }
+  }
+  */
   
   .cloudimg1 {
 		position: absolute;
@@ -151,7 +171,7 @@
 		margin-left: 10vw;
 		margin-top: 25vh;
 		transform: translateX(-50%) translateY(-50%);
-		height: 8%;
+		height: 70px;
 		opacity: .7;
 		overflow: hidden;
   }
@@ -162,7 +182,7 @@
 		margin-left: 30vw;
 		margin-top: 15vh;
 		transform: translateX(-50%) translateY(-50%);
-		height: 8%;
+		height: 70px;
 		opacity: .7;
 		overflow: hidden;
   }
@@ -173,7 +193,7 @@
 		margin-left: 60vw;
 		margin-top: 25vh;
 		transform: translateX(-50%) translateY(-50%);
-		height: 8%;
+		height: 70px;
 		opacity: .7;
 		overflow: hidden;
   }
@@ -184,7 +204,7 @@
 		margin-left: 80vw;
 		margin-top: 10vh;
 		transform: translateX(-50%) translateY(-50%);
-		height: 8%;
+		height: 70px;
 		opacity: .7;
 		overflow: hidden;
   }
@@ -195,10 +215,15 @@
 		margin-left: 100vw;
 		margin-top: 20vh;
 		transform: translateX(-50%) translateY(-50%);
-		height: 8%;
+		height: 70px;
 		opacity: .7;
 		overflow: hidden;
   }
+
+ /*.plane:hover {
+	  cursor: pointer;
+	  filter: brightness(0.9);
+  }*/
   
 
   #musicWindow {
@@ -211,6 +236,18 @@
 	  overflow: hidden;
 	  font-family: 'Rubik Pixels';
   }
+
+  #showsWindow {
+	justify-content: center;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	overflow: hidden;
+	font-family: 'Rubik Pixels';
+	color: white;
+	margin: auto;
+}
 
   .arrowSign {
 	  position: absolute;
@@ -236,6 +273,19 @@
 }
 
 @media (max-width: 1920px) {
+/*
+	.plane {
+		position: absolute;
+		animation: movePlane 100s linear infinite;
+		margin-left: 100vw;
+		margin-top: 150px;
+		transform: translateX(-50%) translateY(-50%);
+		height: 80px;
+		overflow: hidden;
+		z-index: 3;
+  }
+*/
+
 	.frame {
 		width: 900px;
 		height: 750px;
@@ -266,7 +316,7 @@
 		width:350px;
 		height:70px;
 		background:#735b3c;
-		z-index: 3;
+		z-index: 5;
 		border: 3px solid black;
 		border-radius: 10px;
 		text-shadow: -1px 1px 0 #292929,
@@ -291,25 +341,53 @@
 		margin-top: calc(50vh - 260px);
 	}
 
+	.biggerWrapper {
+		width: 100vw;
+		height: 100vh;
+		position: relative;
+	}
+
 	.showsFrame {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		top: 50%;
 		width: 900px;
-		height: 750px;
-		overflow: hidden;
+		height: 760px;
 		padding: none;
-		margin: auto;
+	}
+
+	.showsWrapper {
+		--listheight: 760px;
+		max-width: 900px;
+		max-height: 760px;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		top: 50%;
+		overflow-y: scroll; 
+		padding: none;
+		position: relative; 
+		text-overflow: "";
+		z-index: 3;
+		overflow-x: hidden;
 	}
 
 	.showsList {
-		position: absolute;
-		height: 850px;
-		margin-top: calc(50vh - 300px);
+		max-height: calc(var(--listheight) - 100px);
+		width: 90%;
+		padding: 30px;
+		top: 0;
 		display: flex;
 		flex-direction: column;
+		text-shadow: -1px 1px 0 #292929,
+					2px 2px 0 #292929,
+					1px -1px 0 #292929,
+					-1px -1px 0 #292929;
 	}
 	
 	.exitShow {
 		position: absolute;
-		z-index: 3;
+		z-index: 5;
 		height: 25px;
 		width: 25px;
 		padding-left: 820px;
@@ -391,10 +469,72 @@
 	.exitAbout:hover {
 		cursor: pointer;
 	}
+
+	#contactWindow {
+		justify-content: center;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		overflow: hidden;
+		font-family: 'Rubik Pixels';
+		color: white;
+	}
+
+	.contactFrame {
+		width: 750px;
+		height: 400px;
+		overflow: hidden;
+		padding: none;
+		margin: auto;
+	}
+
+	.contactInfo {
+		position: absolute;
+		width: 750px;
+		height: 400px;
+		display: block;
+		justify-content: center;
+		align-content: center;
+		line-height: 33px;
+		text-align: center;
+		margin-top: calc(50vh - 200px);
+	}
+	
+	.contactInfo h1 {
+		font-size: 27px;
+		word-spacing: 3px;
+		text-shadow: -1px 1px 0 #292929,
+		2px 2px 0 #292929,
+		1px -1px 0 #292929,
+		-1px -1px 0 #292929;
+	}
+
+	.contactInfo h2 {
+		font-size: 17px;
+		word-spacing: 3px;
+		text-shadow: -1px 1px 0 #292929,
+		2px 2px 0 #292929,
+		1px -1px 0 #292929,
+		-1px -1px 0 #292929;
+	}
+
+	.exitContact {
+		position: absolute;
+		z-index: 3;
+		height: 20px;
+		width: 20px;
+		padding-left: 690px;
+		padding-top: calc(50vh - 180px);
+	}
+	
+	.exitContact:hover {
+		cursor: pointer;
+	}
 	
 	.musicimg {
 		height: 3vh;
-		margin-top: 32vh;
+		margin-top: 30vh;
 		filter: saturate(100%);
 		filter: brightness(95%);
 	}
@@ -403,11 +543,11 @@
 		filter: contrast(85%);
 		filter: brightness(130%);
 		height: 3.5vh;
-		margin-top: 31.5vh;
+		margin-top: 29.5vh;
 		cursor: pointer;
 	}
 	
-	.shop {
+	.contact {
 		position: relative;
 		height: 100%;
 		width: 100%;
@@ -419,18 +559,18 @@
 		margin-left: none;
 	}
 	
-	.shopimg {
-		height: 3vh;
-		margin-top: 4vh;
+	.contactimg {
+		height: 3.5vh;
+		margin-top: 3.5vh;
 		filter: saturate(100%);
 		filter: brightness(95%);
 	}
 	
-	.shopimg:hover {
+	.contactimg:hover {
 		filter: contrast(85%);
 		filter: brightness(130%);
-		height: 3.5vh;
-		margin-top: 3.5vh;
+		height: 4vh;
+		margin-top: 3vh;
 		cursor: pointer;
 	}
 	
@@ -448,7 +588,7 @@
 	
 	.showsimg {
 		height: 3vh;
-		margin-top: 4vh;
+		margin-top: 3.5vh;
 		filter: saturate(100%);
 		filter: brightness(95%);
 	}
@@ -457,7 +597,7 @@
 		filter: contrast(85%);
 		filter: brightness(130%);
 		height: 3.5vh;
-		margin-top: 3.5vh;
+		margin-top: 3vh;
 		cursor: pointer;
 	}
 	
@@ -475,7 +615,7 @@
 	
 	.aboutimg {
 		height: 3vh;
-		margin-top: 4vh;
+		margin-top: 3.5vh;
 		filter: saturate(100%);
 		filter: brightness(95%);
 		cursor: pointer;
@@ -485,28 +625,34 @@
 		filter: contrast(85%);
 		filter: brightness(130%);
 		height: 3.5vh;
-		margin-top: 3.5vh;
+		margin-top: 3vh;
 	}
-	
-	.scroll {
+
+	.subscribe {
+		position: relative;
+		height: 100%;
+		width: 100%;
 		display: flex;
 		justify-content: center;
 		align-content: center;
-		position: absolute;
-		z-index: 2;
+		z-index: 1;
+		overflow: hidden;
+		margin-left: none;
 	}
 	
-	.scrollimg {
-		height: 70px;
-		width: 280px;
-		filter: saturate(80%);
+	.subscribeimg {
+		height: 3.1vh;
+		margin-top: 3.15vh;
+		filter: saturate(95%);
+		filter: brightness(95%);
+		cursor: pointer;
 	}
 	
-	.scrollimg:hover {
-		height: 70px;
-		width: 280px;
-		opacity: .7;
-		filter: saturate(80%);
+	.subscribeimg:hover {
+		filter: contrast(85%);
+		filter: brightness(130%);
+		height: 3.6vh;
+		margin-top: 2.65vh;
 	}
 	
 	.socials {
@@ -543,129 +689,80 @@
 		cursor: pointer;
 		transform: scale(1.2);
 	}
-
-	#showsWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Rubik Pixels';
-		color: white;
-		text-shadow: -1px 1px 0 #292929,
-		2px 2px 0 #292929,
-		1px -1px 0 #292929,
-		-1px -1px 0 #292929;
-	}
 }
 
 @media screen and (max-width: 1200px) {
+	/*
+	.plane {
+		position: absolute;
+		animation: movePlane 100s linear infinite;
+		margin-left: 95vw;
+		margin-top: 300px;
+		transform: translateX(-50%) translateY(-50%);
+		height: 80px;
+		overflow: hidden;
+		z-index: 3;
+  	}
+	  */
+
 	.frame {
 		width: 750px;
 		height: 650px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 	
 	.exit {
-		position: absolute;
-		z-index: 3;
 		height: 25px;
 		width: 25px;
 		padding-left: 675px;
 		padding-top: calc(50vh - 300px);
 	}
-	
-	.exit:hover {
-		cursor: pointer;
-	}
-  
-  
+   
 	#rectangle {
 		margin-top: calc(50vh - 350px);
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		position: absolute;
-		width:300px;
-		height:55px;
-		background:#735b3c;
-		z-index: 3;
+		width: 300px;
+		height: 55px;
 		border: 3px solid black;
 		border-radius: 10px;
 		font-size: 13px;
 	}
-	
-	.inventory {
-		position: absolute;
-	}
-	
+
 	.songs {
-		display: inline-flex;
-		flex-wrap: wrap;
-		z-index: 4;
-		position: absolute;
 		width: 600px;
 		height: 300px;
-		justify-content: center;
 		margin-top: calc(50vh - 235px);
 	}
 
 	.showsFrame {
 		width: 750px;
 		height: 650px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 
 	.showsList {
-		margin-top: calc(50vh - 250px);
+		max-height: calc(var(--listheight) - 100px);
+	}
+
+	.showsWrapper {
+		--listheight: 650px;
+		max-width: 750px;
+		max-height: 650px;
 	}
 
 	.exitShow {
-		position: absolute;
-		z-index: 3;
 		height: 25px;
 		width: 25px;
 		padding-left: 675px;
 		padding-top: calc(50vh - 300px);
 	}
-
-	.exitShow:hover {
-		cursor: pointer;
-	}
-
-	#aboutWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Rubik Pixels';
-		color: white;
-	}
 	
 	.aboutFrame {
 		width: 800px;
 		height: 700px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 	
 	.bio {
-		position: absolute;
 		width: 750px;
 		height: 400px;
-		display: flex;
-		justify-content: center;
-		align-content: center;
 		line-height: 40px;
-		text-align: center;
 	}
 	
 	.bio h1 {
@@ -680,154 +777,68 @@
 	
 	.pictureFrame {
 		height: 350px;
-		position: absolute;
-		z-index: 4;
 		margin-top: calc(50vh - 373px);
 	}
 	
 	.exitAbout {
-		position: absolute;
-		z-index: 3;
 		height: 20px;
 		width: 20px;
 		padding-left: 740px;
 		padding-top: calc(50vh - 330px);
 	}
 	
-	.exitAbout:hover {
-		cursor: pointer;
-	}
-
-	.scroll {
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		position: absolute;
-		z-index: 2;
-	}
-	
-	.scrollimg {
-		height: 70px;
-		width: 280px;
-		filter: saturate(80%);
-	}
-	
-	.scrollimg:hover {
-		height: 70px;
-		width: 280px;
-		filter: saturate(80%);
-	}
-	
-	.socials {
-		opacity: .9;
-		width: 100vw;
-		height: 8vh;
-		justify-content: center;
-		position: absolute;
-		display: flex;
-		z-index: 1;
-		bottom: 0;
-	}
-	
 	.icons {
-		display: flex;
-		justify-content: center;
-		align-content: center;
 		height: 70px;
 		width: 320px;
-		position: absolute;
-		z-index: 3;
 	}
 	
 	.icons img {
-		height: 40px;
-		margin-top: 25px;
 		padding-left: 10px;
 		padding-right: 10px;
-		transition: all .1s ease-in-out; 
-		border-radius: 10px;
-	}
-	
-	.icons img:hover {
-		cursor: pointer;
-		transform: scale(1.2);
 	}
 }
 
 @media  (max-width: 900px) {
+	/*
+	.plane {
+		position: absolute;
+		animation: movePlane 100s linear infinite;
+		margin-left: 95vw;
+		margin-top: 27vh;
+		transform: translateX(-50%) translateY(-50%);
+		height: 60px;
+		overflow: hidden;
+		z-index: 3;
+  	}
+	  */
+
 	.frame {
 		width: 650px;
 		height: 550px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 	
 	.exit {
-		position: absolute;
-		z-index: 3;
 		height: 15px;
 		width: 15px;
 		padding-left: 600px;
 		padding-top: calc(50vh - 250px);
 	}
-	
-	.exit:hover {
-		cursor: pointer;
-	}
-  
-  
+   
 	#rectangle {
 		margin-top: calc(50vh - 300px);
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		position: absolute;
 		width:300px;
 		height:55px;
-		background:#735b3c;
-		z-index: 3;
-		border: 3px solid black;
 		border-radius: 10px;
 		font-size: 11px;
 	}
 	
-	.inventory {
-		position: absolute;
-	}
-	
 	.songs {
-		display: inline-flex;
-		flex-wrap: wrap;
-		z-index: 4;
-		position: absolute;
 		width: 550px;
 		height: 300px;
-		justify-content: center;
 		margin-top: calc(50vh - 200px);;
 	}
 
-	.music {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-		margin-left: none;
-	}
-
 	#showsWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Rubik Pixels';
-		color: white;
 		text-shadow: -1px 1px 0 #292929,
 		2px 2px 0 #292929,
 		1px -1px 0 #292929,
@@ -837,315 +848,176 @@
 	.showsFrame {
 		width: 700px;
 		height: 550px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 
-	.showsList {
-		margin-top: calc(50vh - 220px);
+	.showsWrapper {
+		--listheight: 550px;
+		max-width: 700px;
+		max-height: 550px;
 	}
 
 	.exitShow {
-		position: absolute;
-		z-index: 3;
-		height: 15px;
-		width: 15px;
+		height: 20px;
+		width: 20px;
 		padding-left: 645px;
 		padding-top: calc(50vh - 255px);
 	}
 
-	.exitShow:hover {
-		cursor: pointer;
-	}
-
-	#aboutWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Rubik Pixels';
-		color: white;
-	}
-	
 	.aboutFrame {
 		width: 600px;
 		height: 600px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 	
 	.bio {
-		position: absolute;
 		width: 500px;
 		height: 600px;
-		display: flex;
-		justify-content: center;
-		align-content: center;
 		line-height: 30px;
-		text-align: center;
 	}
 	
 	.bio h1 {
 		margin-top: calc(50vh - 40px);
 		font-size: 17px;
 		word-spacing: 2px;
-		text-shadow: -1px 1px 0 #292929,
-		2px 2px 0 #292929,
-		1px -1px 0 #292929,
-		-1px -1px 0 #292929;
 	}
 	
 	.pictureFrame {
 		height: 250px;
-		position: absolute;
-		z-index: 4;
 		margin-top: calc(50vh - 315px);
 	}
 	
 	.exitAbout {
-		position: absolute;
-		z-index: 3;
 		height: 17px;
 		width: 17px;
 		padding-left: 550px;
 		padding-top: calc(50vh - 280px);
 	}
-	
-	.exitAbout:hover {
-		cursor: pointer;
+
+	.contactFrame {
+		width: 650px;
+		height: 400px;
 	}
 
+	.contactInfo {
+		width: 650px;
+		height: 400px;
+		line-height: 33px;
+		margin-top: calc(50vh - 200px);
+	}
+	
+	.contactInfo h1 {
+		font-size: 25px;
+	}
+
+	.contactInfo h2 {
+		font-size: 15px;
+	}
+
+	.exitContact {
+		height: 20px;
+		width: 20px;
+		padding-left: 600px;
+		padding-top: calc(50vh - 180px);
+	}
+	
 	
 	.musicimg {
 		height: 3.5vh;
-		margin-top: 34vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
+		margin-top: 30vh;
 	}
 	
 	.musicimg:hover {
-		filter: contrast(85%);
-		filter: brightness(130%);
 		height: 4vh;
-		margin-top: 33.5vh;
-		cursor: pointer;
+		margin-top: 29.5vh;
 	}
 	
-	.shop {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-		margin-left: none;
-	}
-	
-	.shopimg {
-		height: 3.5vh;
-		margin-top: 3.5vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
-	}
-	
-	.shopimg:hover {
-		filter: contrast(85%);
-		filter: brightness(130%);
+	.contactimg {
 		height: 4vh;
 		margin-top: 3vh;
-		cursor: pointer;
 	}
 	
-	.shows {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-		margin-left: none;
+	.contactimg:hover {
+		height: 4.5vh;
+		margin-top: 2.5vh;
 	}
 	
 	.showsimg {
 		height: 3.5vh;
 		margin-top: 3.5vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
 	}
 	
 	.showsimg:hover {
-		filter: contrast(85%);
-		filter: brightness(130%);
 		height: 4vh;
 		margin-top: 3vh;
-		cursor: pointer;
-	}
-	
-	.about {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-		margin-left: none;
 	}
 	
 	.aboutimg {
 		height: 3.5vh;
 		margin-top: 3.5vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
-		cursor: pointer;
 	}
 	
 	.aboutimg:hover {
-		filter: contrast(85%);
-		filter: brightness(130%);
 		height: 4vh;
 		margin-top: 3vh;
 	}
-
-	.scroll {
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		position: absolute;
-		z-index: 2;
+	
+	.subscribeimg {
+		height: 3.6vh;
+		margin-top: 2.9vh;
 	}
 	
-	.scrollimg {
-		height: 70px;
-		width: 280px;
-		filter: saturate(80%);
-	}
-	
-	.scrollimg:hover {
-		height: 70px;
-		width: 280px;
-		filter: saturate(80%);
-	}
-	
-	.socials {
-		opacity: .95;
-		width: 100vw;
-		height: 8vh;
-		justify-content: center;
-		position: absolute;
-		display: flex;
-		z-index: 1;
-		bottom: 0;
+	.subscribeimg:hover {
+		height: 4vh;
+		margin-top: 2.5vh;
 	}
 	
 	.icons {
-		display: flex;
-		justify-content: center;
-		align-content: center;
 		height: 70px;
 		width: 320px;
-		position: absolute;
-		z-index: 3;
-	}
-	
-	.icons img {
-		height: 40px;
-		margin-top: 25px;
-		padding-left: 10px;
-		padding-right: 10px;
-		transition: all .1s ease-in-out; 
-		border-radius: 10px;
-	}
-	
-	.icons img:hover {
-		cursor: pointer;
-		transform: scale(1.2);
 	}
 }
 
 @media  (max-width: 768px) {
+	/*
+	.plane {
+		position: absolute;
+		animation: movePlane 100s linear infinite;
+		margin-left: 95vw;
+		margin-top: 28vh;
+		transform: translateX(-50%) translateY(-50%);
+		height: 60px;
+		overflow: hidden;
+		z-index: 3;
+  	}
+	  */
 	.frame {
 		width: 525px;
 		height: 525px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 	
 	.exit {
-		position: absolute;
-		z-index: 3;
 		height: 13px;
 		width: 13px;
 		padding-left: 475px;
 		padding-top: calc(50vh - 245px);
 	}
-	
-	.exit:hover {
-		cursor: pointer;
-	}
-  
   
 	#rectangle {
 		margin-top: calc(50vh - 275px);
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		position: absolute;
 		width:280px;
 		height:50px;
-		background:#735b3c;
-		z-index: 3;
 		border: 3px solid black;
 		border-radius: 10px;
 		font-size: 11px;
 	}
 	
-	.inventory {
-		position: absolute;
-	}
-	
 	.songs {
-		display: inline-flex;
-		flex-wrap: wrap;
-		z-index: 4;
-		position: absolute;
 		width: 550px;
 		height: 300px;
-		justify-content: center;
 		margin-top: calc(50vh - 160px);;
 	}
 
-	.music {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-		margin-left: none;
-	}
 
 	#showsWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Rubik Pixels';
-		color: white;
 		text-shadow: -1px 1px 0 #292929,
 		1px 1px 0 #292929,
 		1px -1px 0 #292929,
@@ -1155,56 +1027,30 @@
 	.showsFrame {
 		width: 600px;
 		height: 525px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 
-	.showsList {
-		margin-top: calc(50vh - 190px);
+	.showsWrapper {
+		--listheight: 525px;
+		max-width: 600px;
+		max-height: 525px;
 	}
 
 	.exitShow {
-		position: absolute;
-		z-index: 3;
-		height: 13px;
-		width: 13px;
+		height: 17px;
+		width: 17px;
 		padding-left: 555px;
 		padding-top: calc(50vh - 245px);
-	}
-
-	.exitShow:hover {
-		cursor: pointer;
-	}
-
-	#aboutWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Rubik Pixels';
-		color: white;
 	}
 	
 	.aboutFrame {
 		width: 600px;
 		height: 600px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 	
 	.bio {
-		position: absolute;
 		width: 500px;
 		height: 600px;
-		display: flex;
-		justify-content: center;
-		align-content: center;
 		line-height: 30px;
-		text-align: center;
 	}
 	
 	.bio h1 {
@@ -1219,54 +1065,46 @@
 	
 	.pictureFrame {
 		height: 250px;
-		position: absolute;
-		z-index: 4;
 		margin-top: calc(50vh - 315px);
 	}
 	
 	.exitAbout {
-		position: absolute;
-		z-index: 3;
 		height: 17px;
 		width: 17px;
 		padding-left: 550px;
 		padding-top: calc(50vh - 280px);
 	}
 	
-	.exitAbout:hover {
-		cursor: pointer;
+	.contactFrame {
+		width: 450px;
+		height: 400px;
 	}
 
-	.scrollimg {
-		height: 50px;
-		width: 250px;
-		filter: saturate(80%);
+	.contactInfo {
+		width: 450px;
+		height: 400px;
+		line-height: 33px;
+		margin-top: calc(50vh - 200px);
 	}
 	
-	.scrollimg:hover {
-		height: 50px;
-		width: 250px;
-		filter: saturate(80%);
+	.contactInfo h1 {
+		font-size: 20px;
 	}
 
-	.socials {
-		opacity: .9;
-		width: 100vw;
-		height: 8vh;
-		justify-content: center;
-		position: absolute;
-		display: flex;
-		z-index: 1;
-		bottom: 0;
+	.contactInfo h2 {
+		font-size: 12px;
+	}
+
+	.exitContact {
+		height: 20px;
+		width: 20px;
+		padding-left: 400px;
+		padding-top: calc(50vh - 180px);
 	}
 	
 	.icons {
-		display: flex;
-		justify-content: center;
-		align-content: center;
 		height: 50px;
 		width: 400px;
-		position: absolute;
 		z-index: 3;
 	}
 
@@ -1275,13 +1113,11 @@
 		margin-top: 10px;
 		padding-left: 7px;
 		padding-right: 7px;
-		transition: all .1s ease-in-out; 
-		border-radius: 10px;
 	}
-
   }
 
 @media screen and (max-width: 490px) {
+	/*
 	.frame {
 		width: 400px;
 		height: 630px;
@@ -1289,24 +1125,18 @@
 		padding: none;
 		margin: auto;
 	}
+	*/
 
 	#rectangle {
 		margin-top: calc(50vh - 330px);
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		position: absolute;
 		width: 200px;
 		height: 50px;
-		background:#735b3c;
-		z-index: 3;
 		border: 3px solid black;
 		border-radius: 10px;
 		text-shadow: -1px 1px 0 #292929,
 		2px 2px 0 #292929,
 		1px -1px 0 #292929,
 		-1px -1px 0 #292929;
-		color: white;
 	}
 
 	.inventory {
@@ -1314,38 +1144,20 @@
 	}
 
 	.exit {
-		position: absolute;
-		z-index: 3;
 		height: 15px;
 		width: 15px;
 		padding-left: 350px;
 		padding-top: calc(50vh - 300px);
 	}
 	
-	.exit:hover {
-		cursor: pointer;
-	}
-  
 	.songs {
-		display: inline-flex;
-		flex-wrap: wrap;
 		z-index: 4;
-		position: absolute;
 		width: 400px;
 		height: 500px;
-		justify-content: center;
 		margin-top: calc(50vh - 260px);
 	}
 
 	#showsWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Rubik Pixels';
-		color: white;
 		text-shadow: -1px 1px 0 #292929,
 		1px 1px 0 #292929,
 		1px -1px 0 #292929,
@@ -1354,61 +1166,35 @@
 
 	.showsFrame {
 		width: 400px;
-		height: 630px;
-		overflow: hidden;
-		padding: none;
-		margin-top: auto;
+		height: 640px;
 	}
 
-	.showsList {
-		margin-top: calc(50vh - 240px);
+	.showsWrapper {
+		--listheight: 640px;
+		max-width: 400px;
+		max-height: 640px;
 	}
 
 	.exitShow {
-		position: absolute;
-		z-index: 3;
 		height: 14px;
 		width: 14px;
 		padding-left: 350px;
 		padding-top: calc(50vh - 300px);
 	}
 
-	.exitShow:hover {
-		cursor: pointer;
-	}
-
-	#aboutWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Rubik Pixels';
-		color: white;
-	}
-	
 	.aboutFrame {
 		width: 400px;
 		height: 630px;
-		overflow: hidden;
-		padding: none;
-		margin-top: auto;
 	}
 	
 	.bio {
-		position: absolute;
 		width: 330px;
 		height: 110px;
-		display: flex;
-		justify-content: center;
-		align-content: center;
 		line-height: 25px;
-		text-align: center;
 	}
 	
 	.bio h1 {
-		margin-top: calc(50vh - px);
+		margin-top: calc(50vh - 50px);
 		font-size: 15px;
 		word-spacing: 2px;
 		text-shadow: -1px 1px 0 #292929,
@@ -1419,161 +1205,133 @@
 	
 	.pictureFrame {
 		height: 250px;
-		position: absolute;
-		z-index: 4;
 		margin-top: calc(50vh - 330px);
 	}
 	
 	.exitAbout {
-		position: absolute;
-		z-index: 3;
 		height: 15px;
 		width: 15px;
 		padding-left: 350px;
 		padding-top: calc(50vh - 300px);
 	}
-	
-	.exitAbout:hover {
-		cursor: pointer;
+
+	.contactFrame {
+		width: 360px;
+		height: 200px;
 	}
 
-	.music {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-		margin-left: none;
+	.contactInfo {
+		width: 360px;
+		height: 200px;
+		line-height: 28px;
+		margin-top: calc(50vh - 100px);
+	}
+	
+	.contactInfo h1 {
+		font-size: 17px;
+		word-spacing: 3px;
+		text-shadow: -1px 1px 0 #292929,
+		2px 2px 0 #292929,
+		1px -1px 0 #292929,
+		-1px -1px 0 #292929;
+	}
+
+	.contactInfo h2 {
+		font-size: 10px;
+		word-spacing: 3px;
+		text-shadow: -1px 1px 0 #292929,
+		2px 2px 0 #292929,
+		1px -1px 0 #292929,
+		-1px -1px 0 #292929;
+	}
+
+	.exitContact {
+		height: 15px;
+		width: 15px;
+		padding-left: 320px;
+		padding-top: calc(50vh - 90px);
 	}
 	
 	.musicimg {
 		height:3vh;
-		margin-top: 32vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
+		margin-top: 29vh;
 	}
 	
-	.shop {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-	}
-	
-	.shopimg {
-		height: 3vh;
+	.contactimg {
+		height: 3.5vh;
 		margin-top: 4vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
 	}
 	
-	.shows {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-		margin-left: none;
-	}
 	
 	.showsimg {
 		height: 3vh;
 		margin-top: 4vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
-	}
-	
-	.about {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-		margin-left: none;
 	}
 	
 	.aboutimg {
 		height: 3vh;
 		margin-top: 4vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
-		cursor: pointer;
 	}
-	
+
+	.subscribeimg {
+		height: 3.1vh;
+		margin-top: 4vh;
+	}
 
 	.socials {
-		opacity: .85;
-		width: 100vw;
 		height: 10vh;
-		justify-content: center;
-		position: absolute;
-		display: flex;
-		z-index: 0;
-		bottom: 20px;
+		bottom: 10px;
 	}
 	
 	.icons {
-		display: flex;
-		justify-content: center;
-		align-content: center;
 		height: 100px;
-		width: 100vw;
-		position: absolute;
-		z-index: 4;
 	}
 
 	.icons img {
-		height: 50px;
+		height: 40px;
 		margin-bottom: 0px;
-		padding-left: 1px;
-		padding-right: 1px;
+		padding-left: 4px;
+		padding-right: 4px;
 		padding-bottom:0px;
 		padding-top: 0px;
-		transition: all .1s ease-in-out; 
-		border-radius: 15px;
+		border-radius: 10px;
+	}
+
+	.icons img:hover {
+		transform: scale(1.0);
 	}
 
 }
 
 @media screen and (max-width: 390px) {
+	/*
+	.plane {
+		position: absolute;
+		animation: movePlane 100s linear infinite;
+		margin-left: 95vw;
+		margin-top: 28vh;
+		transform: translateX(-50%) translateY(-50%);
+		height: 35px;
+		overflow: hidden;
+		z-index: 3;
+  	}
+	  */
+
 	.frame {
 		width: 350px;
 		height: 550px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 
 	#rectangle {
 		margin-top: calc(50vh - 290px);
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		position: absolute;
 		width: 200px;
 		height: 50px;
-		background:#735b3c;
-		z-index: 3;
 		border: 3px solid black;
 		border-radius: 10px;
 		text-shadow: -1px 1px 0 #292929,
 		2px 2px 0 #292929,
 		1px -1px 0 #292929,
 		-1px -1px 0 #292929;
-		color: white;
 	}
 
 	.inventory {
@@ -1581,38 +1339,19 @@
 	}
 
 	.exit {
-		position: absolute;
-		z-index: 3;
 		height: 15px;
 		width: 15px;
 		padding-left: calc(50vw + 120px);
 		padding-top: calc(50vh - 260px);
 	}
-	
-	.exit:hover {
-		cursor: pointer;
-	}
   
 	.songs {
-		display: inline-flex;
-		flex-wrap: wrap;
-		z-index: 4;
-		position: absolute;
 		width: 350px;
 		height: 500px;
-		justify-content: center;
 		margin-top: calc(50vh - 230px);
 	}
 
 	#showsWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Rubik Pixels';
-		color: white;
 		text-shadow: -1px 1px 0 #292929,
 		2px 2px 0 #292929,
 		1px -1px 0 #292929,
@@ -1622,56 +1361,30 @@
 	.showsFrame {
 		width: 350px;
 		height: 550px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 
-	.showsList {
-		margin-top: calc(50vh - 205px);
+	.showsWrapper {
+		--listheight: 550px;
+		max-width: 350px;
+		max-height: 550px;
 	}
 
 	.exitShow {
-		position: absolute;
-		z-index: 3;
 		height: 15px;
 		width: 15px;
 		padding-left: calc(50vw + 120px);
-		padding-top: calc(50vh - 265px);
-	}
-
-	.exitShow:hover {
-		cursor: pointer;
-	}
-
-	#aboutWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Rubik Pixels';
-		color: white;
+		padding-top: calc(50vh - 255px);
 	}
 	
 	.aboutFrame {
-		margin: auto;
 		width: 350px;
 		height: 550px;
-		overflow: hidden;
-		padding: none;
 	}
 	
 	.bio {
-		position: absolute;
 		width: 300px;
 		height: 110px;
-		display: flex;
-		justify-content: center;
-		align-content: center;
 		line-height: 23px;
-		text-align: center;
 	}
 	
 	.bio h1 {
@@ -1686,131 +1399,72 @@
 	
 	.pictureFrame {
 		height: 225px;
-		position: absolute;
-		z-index: 4;
 		margin-top: calc(50vh - 290px);
 	}
 	
 	.exitAbout {
-		position: absolute;
-		z-index: 3;
 		height: 15px;
 		width: 15px;
 		padding-left: calc(50vw + 120px);
 		padding-top: calc(50vh - 260px);
 	}
-	
-	.exitAbout:hover {
-		cursor: pointer;
+
+	.contactFrame {
+		width: 340px;
+		height: 200px;
 	}
 
-	.music {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-		margin-left: none;
+	.contactInfo {
+		width: 340px;
+		height: 200px;
+		line-height: 28px;
+		margin-top: calc(50vh - 100px);
+	}
+	
+	.contactInfo h1 {
+		font-size: 15px;
+	}
+
+	.contactInfo h2 {
+		font-size: 9px;
+	}
+
+	.exitContact {
+		height: 15px;
+		width: 15px;
+		padding-left: 300px;
+		padding-top: calc(50vh - 90px);
 	}
 	
 	.musicimg {
 		height:3vh;
-		margin-top: 33vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
+		margin-top: 30vh;
 	}
 	
-	.shop {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
+	.contactimg {
+		height: 3.5vh;
+		margin-top: 3.8vh;
 	}
 	
-	.shopimg {
-		height: 3vh;
-		margin-top: 4vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
-	}
-	
-	.shows {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-		margin-left: none;
-	}
 	
 	.showsimg {
 		height: 3vh;
 		margin-top: 4vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
 	}
-	
-	.about {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		z-index: 1;
-		overflow: hidden;
-		margin-left: none;
-	}
-	
+
 	.aboutimg {
 		height: 3vh;
 		margin-top: 4vh;
-		filter: saturate(100%);
-		filter: brightness(95%);
-		cursor: pointer;
-	}
-
-
-	.socials {
-		opacity: .85;
-		width: 100vw;
-		height: 10vh;
-		justify-content: center;
-		position: absolute;
-		display: flex;
-		z-index: 0;
-		bottom: 15px;
-	}
-	
-	.icons {
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		height: 100px;
-		width: 100vw;
-		position: absolute;
-		z-index: 4;
 	}
 
 	.icons img {
-		height: 40px;
+		height: 35px;
 		margin-bottom: 0px;
-		padding-left: 1px;
-		padding-right: 1px;
+		padding-left: 5px;
+		padding-right: 5px;
 		padding-bottom:0px;
 		padding-top: 0px;
-		transition: all .1s ease-in-out; 
-		border-radius: 15px;
+		border-radius: 10px;
 	}
 
 }

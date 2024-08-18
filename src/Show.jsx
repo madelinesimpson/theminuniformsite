@@ -8,7 +8,7 @@ export default function Show () {
     var shows = [];
     
     const fetchInfo = () => {
-      return fetch('https://rest.bandsintown.com/artists/Them%20In%20Uniform/events/?app_id=6547b3d6872e40dbf0629ec229214368&date=past')
+      return fetch('https://rest.bandsintown.com/artists/Them%20In%20Uniform/events/?app_id=6547b3d6872e40dbf0629ec229214368&')
         .then((res) => res.json())
         .then((data) => setData(data))
         .then(console.log(data))
@@ -24,7 +24,7 @@ export default function Show () {
       return (
         <>
           <div className = "comingsoon">
-            <h1>We don't have any upcoming shows right now :( <br/> Check back soon for updates
+            <h1>We don't have any upcoming shows right now  :( <br/> Check back soon for updates
             </h1>
           </div>
         </>
@@ -43,9 +43,34 @@ export default function Show () {
           }
           const monthNumber = datemonth.substring(5,7);
           var digitsmonth = "";
-          if (monthNumber=="04") {
-            digitsmonth="April";
+          if (monthNumber=="01") {
+            digitsmonth="JAN";
+          } else if (monthNumber=="02") {
+            digitsmonth="FEB";
+          } else if (monthNumber=="03") {
+            digitsmonth="MAR";
+          }  else if (monthNumber=="04") {
+            digitsmonth="APR";
+          } else if (monthNumber=="05") {
+            digitsmonth="MAY";
+          } else if (monthNumber=="06") {
+            digitsmonth="JUN";
+          } else if (monthNumber=="07") {
+            digitsmonth="JUL";
+          } else if (monthNumber=="08") {
+            digitsmonth="AUG";
+          } else if (monthNumber=="09") {
+            digitsmonth="SEP";
+          } else if (monthNumber=="10") {
+            digitsmonth="OCT";
+          } else if (monthNumber=="11") {
+            digitsmonth="NOV";
+          } else if (monthNumber=="12") {
+            digitsmonth="DEC";
+          } else {
+            digitsmonth="Date not found";
           }
+          
           console.log(data[i]);
           var MDY = digitsmonth + " " + digitsday + ", " + digitsyear;
           data[i]["MDY"] = MDY;
