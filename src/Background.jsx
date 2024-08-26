@@ -107,8 +107,8 @@ export default function Background () {
     return  (
         <>
             <div className={`ogBG ${classNamesOG} ${classNamesDim}`}></div>
-            <div className={`reverseBG ${classNamesReverse}`}></div>
-            <div className="blueBG"></div>
+            {/*<div className={`reverseBG ${classNamesReverse}`}></div>*/}
+            <div className={`blueBG ${classNamesDim}`}></div>
             <div className={`title ${classNamesOG} ${classNamesDim}`}>
                 <img className="titleImg" src={title}/>
                 {/*<img className={`plane ${classNamesCloud}`} src={plane}/>*/}

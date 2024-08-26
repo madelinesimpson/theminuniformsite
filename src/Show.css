@@ -3,10 +3,10 @@
         z-index: 3;
         display: grid;
         justify-content: center;
-        grid-template-columns: 225px 200px 275px 150px;
+        grid-template-columns: 25% 25% 30% 20%;
         text-align: center;
-        width: 850px;
-        font-size: 10px;
+        width: 100%;
+        font-size: 12px;
         border-bottom: 1px solid black;
         color: white;
     }
@@ -43,10 +43,10 @@
         z-index: 3;
         display: grid;
         justify-content: center;
-        grid-template-columns: 193.75px 168.75px 243.75px 118.75px;
+        grid-template-columns: 25% 25% 30% 20%;
         text-align: center;
-        width: 725px;
-        font-size: 8px;
+        width: 100%;
+        font-size: 10px;
         border-bottom: 1px solid black;
         color: white;
     }
@@ -77,11 +77,10 @@
     .show {    
         z-index: 3;
         display: grid;
-        justify-content: center;
-        grid-template-columns: 181.25px 156.25px 231.25px 106.25px;
+        grid-template-columns: 25% 25% 30% 20%;
         text-align: center;
-        width: 675px;
-        font-size: 7px;
+        width: 100%;
+        font-size: 10px;
         border-bottom: 1px solid black;
         color: white;
     }
@@ -95,7 +94,7 @@
 
     .comingsoon {
         z-index: 3;
-        font-size: 10px;
+        font-size: 12px;
         text-align: center;
         line-height: 40px;
     }
@@ -113,9 +112,9 @@
         z-index: 3;
         display: grid;
         justify-content: center;
-        grid-template-columns: 156.25px 131.25px 206.25px 81.25px;
+        grid-template-columns: 25% 25% 30% 20%;
         text-align: center;
-        width: 575px;
+        width: 100%;
         font-size: 5.5px;
         border-bottom: 1px solid black;
         color: white;
@@ -146,9 +145,9 @@
         z-index: 3;
         display: grid;
         justify-content: center;
-        grid-template-columns: 70px 90px 150px 70px;
+        grid-template-columns: 25% 25% 30% 20%;
         text-align: center;
-        width: 380px;
+        width: 100%;
         font-size: 5px;
         border-bottom: 1px solid black;
         color: white;
@@ -181,9 +180,9 @@
         z-index: 3;
         display: grid;
         justify-content: center;
-        grid-template-columns: 55px 75px 135px 55px;
+        grid-template-columns: 25% 25% 30% 20%;
         text-align: center;
-        width: 320px;
+        width: 100%;
         font-size: 5px;
         border-bottom: 1px solid black;
         color: white;

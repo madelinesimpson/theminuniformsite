@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
 
-@import url('https://fonts.cdnfonts.com/css/common-pixel');
-@import url('https://fonts.googleapis.com/css?family=Rubik Pixels');
+
+* {
+	overflow: hidden;
+}
 
 body {
 	overflow: hidden;
+	overscroll-behavior-x: none;
+	overscroll-behavior-y: none;
 }
 
 .App {
@@ -20,26 +25,28 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: fixed;
-	min-height: 100vh;
-	min-width: 100vw;
+	min-height: 100%;
+	min-width: 100%;
 	overflow: hidden;
 	padding: none;
 	margin-left: none;
 }
 
+/**
 .reverseBG {
 	background-image: url('./assets/editedreversebg.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: fixed;
-	min-height: 100vh;
-	min-width: 100vw;
+	min-height: 100%;
+	min-width: 100%;
 	overflow: hidden;
 	padding: none;
 	margin-left: 100vw;
 	margin-top: 18px;
 }
+**/
 
 .animationog {
 	margin-left: -100vw;
@@ -79,7 +86,7 @@ body {
 		position: absolute;
 		width: 350px;
 		height: 130px;
-		margin-top: 80px;
+		margin-top: 40px;
 	}
 }
 
@@ -234,7 +241,7 @@ body {
 	  width: 100%;
 	  z-index: 2;
 	  overflow: hidden;
-	  font-family: 'Rubik Pixels';
+	  font-family: 'Pixelify Sans';
   }
 
   #showsWindow {
@@ -244,7 +251,7 @@ body {
 	width: 100%;
 	z-index: 2;
 	overflow: hidden;
-	font-family: 'Rubik Pixels';
+	font-family: 'Pixelify Sans';
 	color: white;
 	margin: auto;
 }
@@ -263,9 +270,11 @@ body {
   }
 
   .blueBG {
+	overflow-x: hidden;
+	overflow-y: hidden;
 	background-color: rgb(57, 183, 225);
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 	padding: none;
 	position: absolute;
 	margin-left: none;
@@ -336,14 +345,14 @@ body {
 		z-index: 4;
 		position: absolute;
 		width: 800px;
-		height: 500px;
+		height: 510px;
 		justify-content: center;
 		margin-top: calc(50vh - 260px);
 	}
 
 	.biggerWrapper {
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
+		height: 100%;
 		position: relative;
 	}
 
@@ -375,8 +384,8 @@ body {
 	.showsList {
 		max-height: calc(var(--listheight) - 100px);
 		width: 90%;
-		padding: 30px;
 		top: 0;
+		margin: auto;
 		display: flex;
 		flex-direction: column;
 		text-shadow: -1px 1px 0 #292929,
@@ -417,7 +426,7 @@ body {
 		width: 100%;
 		z-index: 2;
 		overflow: hidden;
-		font-family: 'Rubik Pixels';
+		font-family: 'Pixelify Sans';
 		color: white;
 	}
 	
@@ -432,7 +441,7 @@ body {
 	.bio {
 		position: absolute;
 		width: 800px;
-		height: 400px;
+		height: 1000px;
 		display: flex;
 		justify-content: center;
 		align-content: center;
@@ -477,7 +486,7 @@ body {
 		width: 100%;
 		z-index: 2;
 		overflow: hidden;
-		font-family: 'Rubik Pixels';
+		font-family: 'Pixelify Sans';
 		color: white;
 	}
 
@@ -728,7 +737,7 @@ body {
 
 	.songs {
 		width: 600px;
-		height: 300px;
+		height: 540px;
 		margin-top: calc(50vh - 235px);
 	}
 
@@ -761,7 +770,7 @@ body {
 	
 	.bio {
 		width: 750px;
-		height: 400px;
+		height: 1000px;
 		line-height: 40px;
 	}
 	
@@ -781,10 +790,10 @@ body {
 	}
 	
 	.exitAbout {
-		height: 20px;
-		width: 20px;
-		padding-left: 740px;
-		padding-top: calc(50vh - 330px);
+		height: 25px;
+		width: 25px;
+		padding-left: 730px;
+		padding-top: calc(50vh - 325px);
 	}
 	
 	.icons {
@@ -818,9 +827,9 @@ body {
 	}
 	
 	.exit {
-		height: 15px;
-		width: 15px;
-		padding-left: 600px;
+		height: 20px;
+		width: 20px;
+		padding-left: 590px;
 		padding-top: calc(50vh - 250px);
 	}
    
@@ -834,7 +843,7 @@ body {
 	
 	.songs {
 		width: 550px;
-		height: 300px;
+		height: 430px;
 		margin-top: calc(50vh - 200px);;
 	}
 
@@ -919,7 +928,6 @@ body {
 		padding-top: calc(50vh - 180px);
 	}
 	
-	
 	.musicimg {
 		height: 3.5vh;
 		margin-top: 30vh;
@@ -991,14 +999,14 @@ body {
 	  */
 	.frame {
 		width: 525px;
-		height: 525px;
+		height: 500px;
 	}
 	
 	.exit {
-		height: 13px;
-		width: 13px;
-		padding-left: 475px;
-		padding-top: calc(50vh - 245px);
+		height: 20px;
+		width: 20px;
+		padding-left: 470px;
+		padding-top: calc(50vh - 235px);
 	}
   
 	#rectangle {
@@ -1012,8 +1020,8 @@ body {
 	
 	.songs {
 		width: 550px;
-		height: 300px;
-		margin-top: calc(50vh - 160px);;
+		height: 400px;
+		margin-top: calc(50vh - 180px);;
 	}
 
 
@@ -1049,7 +1057,7 @@ body {
 	
 	.bio {
 		width: 500px;
-		height: 600px;
+		height: 800px;
 		line-height: 30px;
 	}
 	
@@ -1069,9 +1077,9 @@ body {
 	}
 	
 	.exitAbout {
-		height: 17px;
-		width: 17px;
-		padding-left: 550px;
+		height: 20px;
+		width: 20px;
+		padding-left: 535px;
 		padding-top: calc(50vh - 280px);
 	}
 	
@@ -1117,18 +1125,29 @@ body {
   }
 
 @media screen and (max-width: 490px) {
-	/*
+
+	.cloudimg1 {
+		display:none;
+	}
+
+	.cloudimg3 {
+		display:none;
+	}
+
+	.ogBG {
+		margin-top: 10px;
+	}
+	
 	.frame {
-		width: 400px;
-		height: 630px;
+		width: 380px;
+		height: 590px;
 		overflow: hidden;
 		padding: none;
 		margin: auto;
 	}
-	*/
 
 	#rectangle {
-		margin-top: calc(50vh - 330px);
+		margin-top: calc(50vh - 360px);
 		width: 200px;
 		height: 50px;
 		border: 3px solid black;
@@ -1144,17 +1163,17 @@ body {
 	}
 
 	.exit {
-		height: 15px;
-		width: 15px;
-		padding-left: 350px;
-		padding-top: calc(50vh - 300px);
+		height: 20px;
+		width: 20px;
+		padding-left: 330px;
+		padding-top: calc(50vh - 320px);
 	}
 	
 	.songs {
 		z-index: 4;
 		width: 400px;
-		height: 500px;
-		margin-top: calc(50vh - 260px);
+		height: 540px;
+		margin-top: calc(50vh - 300px);
 	}
 
 	#showsWindow {
@@ -1165,31 +1184,37 @@ body {
 	}
 
 	.showsFrame {
-		width: 400px;
-		height: 640px;
+		width: 380px;
+		height: 590px;
+		overflow: hidden;
+		padding: none;
+		margin: auto;
 	}
 
 	.showsWrapper {
-		--listheight: 640px;
-		max-width: 400px;
-		max-height: 640px;
+		--listheight: 590px;
+		max-width: 380px;
+		max-height: 590px;
 	}
 
 	.exitShow {
-		height: 14px;
-		width: 14px;
-		padding-left: 350px;
-		padding-top: calc(50vh - 300px);
+		height: 18px;
+		width: 18px;
+		padding-left: 330px;
+		padding-top: calc(50vh - 320px);
 	}
 
 	.aboutFrame {
-		width: 400px;
-		height: 630px;
+		width: 380px;
+		height: 550px;
+		overflow: hidden;
+		padding: none;
+		margin: auto;
 	}
 	
 	.bio {
 		width: 330px;
-		height: 110px;
+		height: 550px;
 		line-height: 25px;
 	}
 	
@@ -1209,9 +1234,9 @@ body {
 	}
 	
 	.exitAbout {
-		height: 15px;
-		width: 15px;
-		padding-left: 350px;
+		height: 20px;
+		width: 20px;
+		padding-left: 330px;
 		padding-top: calc(50vh - 300px);
 	}
 
@@ -1224,7 +1249,7 @@ body {
 		width: 360px;
 		height: 200px;
 		line-height: 28px;
-		margin-top: calc(50vh - 100px);
+		margin-top: calc(50vh - 140px);
 	}
 	
 	.contactInfo h1 {
@@ -1246,15 +1271,20 @@ body {
 	}
 
 	.exitContact {
-		height: 15px;
-		width: 15px;
-		padding-left: 320px;
-		padding-top: calc(50vh - 90px);
+		height: 20px;
+		width: 20px;
+		padding-left: 310px;
+		padding-top: calc(50vh - 130px);
 	}
 	
 	.musicimg {
+		height: 3vh;
+		margin-top: 200px;
+	}
+
+	.musicimg:hover {
 		height:3vh;
-		margin-top: 29vh;
+		margin-top: 200px;
 	}
 	
 	.contactimg {
@@ -1262,8 +1292,17 @@ body {
 		margin-top: 4vh;
 	}
 	
+	.contactimg:hover {
+		height: 3.5vh;
+		margin-top: 4vh;
+	}
 	
 	.showsimg {
+		height: 3vh;
+		margin-top: 4vh;
+	}
+
+	.showsimg:hover {
 		height: 3vh;
 		margin-top: 4vh;
 	}
@@ -1273,14 +1312,24 @@ body {
 		margin-top: 4vh;
 	}
 
+	.aboutimg:hover {
+		height: 3vh;
+		margin-top: 4vh;
+	}
+
 	.subscribeimg {
+		height: 3.1vh;
+		margin-top: 4vh;
+	}
+
+	.subscribeimg:hover {
 		height: 3.1vh;
 		margin-top: 4vh;
 	}
 
 	.socials {
 		height: 10vh;
-		bottom: 10px;
+		bottom: -10px;
 	}
 	
 	.icons {
@@ -1383,12 +1432,12 @@ body {
 	
 	.bio {
 		width: 300px;
-		height: 110px;
+		height: 600px;
 		line-height: 23px;
 	}
 	
 	.bio h1 {
-		margin-top: calc(50vh - 50px);
+		margin-top: calc(50vh - 40px);
 		font-size: 13px;
 		word-spacing: 2px;
 		text-shadow: -1px 1px 0 #292929,
@@ -1440,19 +1489,38 @@ body {
 		height:3vh;
 		margin-top: 30vh;
 	}
+
+	.musicimg:hover {
+		height:3vh;
+		margin-top: 30vh;
+	}
 	
 	.contactimg {
 		height: 3.5vh;
 		margin-top: 3.8vh;
 	}
-	
+
+	.contactimg:hover {
+		height: 3.5vh;
+		margin-top: 3.8vh;
+	}
 	
 	.showsimg {
 		height: 3vh;
 		margin-top: 4vh;
 	}
 
+	.showsimg:hover {
+		height: 3vh;
+		margin-top: 4vh;
+	}
+
 	.aboutimg {
+		height: 3vh;
+		margin-top: 4vh;
+	}
+
+	.aboutimg:hover {
 		height: 3vh;
 		margin-top: 4vh;
 	}
