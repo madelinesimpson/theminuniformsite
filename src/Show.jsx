@@ -79,7 +79,7 @@ export default function Show () {
       return (
             <>
                 {data.map((data) => (
-                    <div className="show">
+                    <div className="show" key={data.id}>
                       <h1>{data.MDY}</h1>
                       <h1>{data.venue.city}, {data.venue.region}</h1>
                       <h1>{data.venue.name}</h1>
