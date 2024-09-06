@@ -1147,7 +1147,7 @@ body {
 	}
 
 	#rectangle {
-		margin-top: calc(50% - 185px);
+		margin-top: calc(((100vh - 590px)/2) - 20px);
 		width: 200px;
 		height: 50px;
 		border: 3px solid black;
@@ -1166,14 +1166,14 @@ body {
 		height: 20px;
 		width: 20px;
 		padding-left: 330px;
-		padding-top: calc(50% - 147px);
+		margin-top: calc(((100vh - 590px)/2) - 200px);
 	}
 	
 	.songs {
 		z-index: 4;
 		width: 400px;
 		height: 540px;
-		margin-top: calc(50% - 125px);
+		margin-top: calc(((100vh - 590px)/2) + 40px);
 	}
 
 	#showsWindow {
@@ -1279,12 +1279,12 @@ body {
 	
 	.musicimg {
 		height: 3vh;
-		margin-top: 200px;
+		margin-top: 27vh;
 	}
 
 	.musicimg:hover {
 		height:3vh;
-		margin-top: 200px;
+		margin-top: 27vh;
 	}
 	
 	.contactimg {
