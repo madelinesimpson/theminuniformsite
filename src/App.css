@@ -1135,7 +1135,7 @@ body {
 	}
 
 	.ogBG {
-		margin-top: 10px;
+		margin-top: 30px;
 	}
 	
 	.frame {
@@ -1201,7 +1201,7 @@ body {
 		height: 18px;
 		width: 18px;
 		padding-left: 330px;
-		padding-top: calc(50vh - 280px);
+		padding-top: calc(50% - 147px);
 	}
 
 	.aboutFrame {
@@ -1214,13 +1214,13 @@ body {
 	
 	.bio {
 		width: 330px;
-		height: 550px;
+		height: 600px;
 		line-height: 25px;
 	}
 	
 	.bio h1 {
-		margin-top: calc(50vh - 50px);
-		font-size: 15px;
+		margin-top: calc(50% + 135px);
+		font-size: 13.5px;
 		word-spacing: 2px;
 		text-shadow: -1px 1px 0 #292929,
 		2px 2px 0 #292929,
@@ -1230,14 +1230,14 @@ body {
 	
 	.pictureFrame {
 		height: 250px;
-		margin-top: calc(50vh - 330px);
+		margin-top: calc(50% - 125px);
 	}
 	
 	.exitAbout {
 		height: 20px;
 		width: 20px;
 		padding-left: 330px;
-		padding-top: calc(50vh - 300px);
+		padding-top: calc(50% - 130px);
 	}
 
 	.contactFrame {
@@ -1249,7 +1249,7 @@ body {
 		width: 360px;
 		height: 200px;
 		line-height: 28px;
-		margin-top: calc(50vh - 140px);
+		margin-top: calc(50% + 35px);
 	}
 	
 	.contactInfo h1 {
@@ -1274,17 +1274,17 @@ body {
 		height: 20px;
 		width: 20px;
 		padding-left: 310px;
-		padding-top: calc(50vh - 130px);
+		padding-top: calc(50% + 45px);
 	}
 	
 	.musicimg {
 		height: 3vh;
-		margin-top: 220px;
+		margin-top: 200px;
 	}
 
 	.musicimg:hover {
 		height:3vh;
-		margin-top: 220px;
+		margin-top: 200px;
 	}
 	
 	.contactimg {
