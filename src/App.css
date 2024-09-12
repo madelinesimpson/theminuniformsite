@@ -81,6 +81,22 @@ body {
 	}
 }
 
+@media screen and (max-width: 1200px) {
+	.titleImg {
+		position: absolute;
+		height:175px;
+		margin-top: 50px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.titleImg {
+		position: absolute;
+		height: 200px;
+		margin-top: 50px;
+	}
+}
+
 @media screen and (max-width: 490px) {
 	.titleImg {
 		position: absolute;
@@ -234,27 +250,57 @@ body {
   
 
   #musicWindow {
-	  margin-top: 0px;
-	  justify-content: center;
-	  position: absolute;
-	  height: 100%;
-	  width: 100%;
-	  z-index: 2;
-	  overflow: hidden;
-	  font-family: 'Pixelify Sans';
-  }
+		display: flex;
+		flex-direction: column;
+		margin-top: 0px;
+		justify-content: flex-start;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		overflow: hidden;
+		font-family: 'Pixelify Sans';
+	}
 
-  #showsWindow {
-	justify-content: center;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	z-index: 2;
-	overflow: hidden;
-	font-family: 'Pixelify Sans';
-	color: white;
-	margin: auto;
-}
+	#showsWindow {
+		justify-content: center;
+		position: absolute;
+		justify-content: flex-start;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		overflow: hidden;
+		font-family: 'Pixelify Sans';
+		color: white;
+	}
+
+	#aboutWindow {
+		justify-content: center;
+		justify-content: flex-start;
+		flex-direction: column;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		overflow: hidden;
+		font-family: 'Pixelify Sans';
+		color: white;
+	}
+
+	#contactWindow {
+		justify-content: center;
+		position: absolute;
+		justify-content: flex-start;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		overflow: hidden;
+		font-family: 'Pixelify Sans';
+		color: white;
+	}
+
 
   .arrowSign {
 	  position: absolute;
@@ -294,38 +340,49 @@ body {
 		z-index: 3;
   }
 */
-
-	.frame {
+ 	
+	.frameContainer {
+		position: relative;
+		height: 820px;
 		width: 900px;
-		height: 750px;
-		overflow: hidden;
-		padding: none;
 		margin: auto;
 	}
-	
+
+	.inventory {
+		font-size: 30px;
+		text-align: center;
+	}
+
 	.exit {
 		position: absolute;
-		z-index: 3;
+		z-index: 5;
 		height: 25px;
 		width: 25px;
-		padding-left: 820px;
-		padding-top: calc(50vh - 350px);
+		margin-left: 850px;
+		margin-top: 60px;
+	}
+
+	.frame {
+		margin-top: 35px;
+		width: 900px;
+		height: 750px;
+		position: absolute;
 	}
 	
 	.exit:hover {
 		cursor: pointer;
 	}
   
-	#rectangle {
-		margin-top: calc(50vh - 400px);
-		display: flex;
-		justify-content: center;
-		align-content: center;
+	#rectangle {	
+		align-content: center;	
 		position: absolute;
+		margin-top: 5px;
+		left: 50%;
+		transform: translateX(-50%);
 		width:350px;
 		height:70px;
 		background:#735b3c;
-		z-index: 5;
+		z-index: 4;
 		border: 3px solid black;
 		border-radius: 10px;
 		text-shadow: -1px 1px 0 #292929,
@@ -333,10 +390,6 @@ body {
 		1px -1px 0 #292929,
 		-1px -1px 0 #292929;
 		color: white;
-	}
-	
-	.inventory {
-		position: absolute;
 	}
 	
 	.songs {
@@ -347,7 +400,9 @@ body {
 		width: 800px;
 		height: 510px;
 		justify-content: center;
-		margin-top: calc(50vh - 260px);
+		margin-top: 150px;
+		padding-left: 50px;
+		padding-right: 50px;
 	}
 
 	.biggerWrapper {
@@ -399,8 +454,8 @@ body {
 		z-index: 5;
 		height: 25px;
 		width: 25px;
-		padding-left: 820px;
-		padding-top: calc(50vh - 350px);
+		margin-left: 850px;
+		margin-top: 55px;
 	}
 	
 	.exitShow:hover {
@@ -419,51 +474,49 @@ body {
 		margin-left: none;
 	}
 
-	#aboutWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Pixelify Sans';
-		color: white;
+	.aboutFrameContainer {
+		width: 900px;
+		height: 820px;
+		margin: auto;
+		position: relative;
 	}
 	
 	.aboutFrame {
 		width: 900px;
 		height: 810px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
+		margin-top: 50px;
+		position: absolute;
 	}
 	
 	.bio {
 		position: absolute;
 		width: 800px;
-		height: 1000px;
+		height: 810px;
 		display: flex;
 		justify-content: center;
 		align-content: center;
 		line-height: 45px;
 		text-align: center;
+		padding-left: 50px;
+		padding-right: 50px;
+		margin-top: 10px;
 	}
 	
 	.bio h1 {
-		margin-top: calc(50vh - 10px);
 		font-size: 23px;
 		word-spacing: 3px;
 		text-shadow: -1px 1px 0 #292929,
 		2px 2px 0 #292929,
 		1px -1px 0 #292929,
 		-1px -1px 0 #292929;
+		margin-top: 430px;
 	}
 	
 	.pictureFrame {
 		height: 400px;
 		position: absolute;
 		z-index: 4;
-		margin-top: calc(50vh - 430px);
+		margin-top: 10px;
 	}
 	
 	.exitAbout {
@@ -471,31 +524,25 @@ body {
 		z-index: 3;
 		height: 25px;
 		width: 25px;
-		padding-left: 825px;
-		padding-top: calc(50vh - 380px);
+		margin-left: 850px;
+		margin-top: 75px;
 	}
 	
 	.exitAbout:hover {
 		cursor: pointer;
 	}
 
-	#contactWindow {
-		justify-content: center;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		overflow: hidden;
-		font-family: 'Pixelify Sans';
-		color: white;
+	.contactFrameContainer {
+		width: 750px;
+		height: 400px;
+		margin: auto;
+		position: relative;
 	}
 
 	.contactFrame {
 		width: 750px;
 		height: 400px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
+		position: absolute;
 	}
 
 	.contactInfo {
@@ -507,20 +554,20 @@ body {
 		align-content: center;
 		line-height: 33px;
 		text-align: center;
-		margin-top: calc(50vh - 200px);
+		margin-top: 0px;
 	}
 	
 	.contactInfo h1 {
-		font-size: 27px;
+		font-size: 30px;
 		word-spacing: 3px;
 		text-shadow: -1px 1px 0 #292929,
-		2px 2px 0 #292929,
+		3px 3px 0 #292929,
 		1px -1px 0 #292929,
 		-1px -1px 0 #292929;
 	}
 
 	.contactInfo h2 {
-		font-size: 17px;
+		font-size: 20px;
 		word-spacing: 3px;
 		text-shadow: -1px 1px 0 #292929,
 		2px 2px 0 #292929,
@@ -533,8 +580,8 @@ body {
 		z-index: 3;
 		height: 20px;
 		width: 20px;
-		padding-left: 690px;
-		padding-top: calc(50vh - 180px);
+		margin-left: 710px;
+		margin-top: 20px;
 	}
 	
 	.exitContact:hover {
@@ -714,31 +761,42 @@ body {
   	}
 	  */
 
+	.frameContainer {
+		width: 750px;
+		height: 705px;
+	}
+
 	.frame {
 		width: 750px;
 		height: 650px;
+		margin-top: 27.5px;
 	}
 	
 	.exit {
 		height: 25px;
 		width: 25px;
-		padding-left: 675px;
-		padding-top: calc(50vh - 300px);
+		margin-left: 700px;
+		margin-top: 50px;
 	}
    
 	#rectangle {
-		margin-top: calc(50vh - 350px);
+		margin-top: 10px;
 		width: 300px;
 		height: 55px;
 		border: 3px solid black;
 		border-radius: 10px;
-		font-size: 13px;
+	}
+	
+	.inventory{
+		font-size: 25px;
 	}
 
 	.songs {
 		width: 600px;
 		height: 540px;
-		margin-top: calc(50vh - 235px);
+		margin-top: 120px;
+		padding-left: 75px;
+		padding-right: 75px;
 	}
 
 	.showsFrame {
@@ -759,23 +817,33 @@ body {
 	.exitShow {
 		height: 25px;
 		width: 25px;
-		padding-left: 675px;
-		padding-top: calc(50vh - 300px);
+		margin-left: 700px;
+		margin-top: 50px;
+	}
+
+	.aboutFrameContainer {
+		width: 800px;
+		height: 710px;
 	}
 	
 	.aboutFrame {
 		width: 800px;
 		height: 700px;
+		margin-top: 10px;
 	}
+
 	
 	.bio {
 		width: 750px;
-		height: 1000px;
+		height: 800px;
 		line-height: 40px;
+		padding-left: 25px;
+		padding-right: 25px;
+		margin-top: -10px;
 	}
 	
 	.bio h1 {
-		margin-top: calc(50vh - 5px);
+		margin-top: 380px;
 		font-size: 20px;
 		word-spacing: 2px;
 		text-shadow: -1px 1px 0 #292929,
@@ -786,22 +854,23 @@ body {
 	
 	.pictureFrame {
 		height: 350px;
-		margin-top: calc(50vh - 373px);
+		margin-top: 0px;
 	}
 	
 	.exitAbout {
 		height: 25px;
 		width: 25px;
-		padding-left: 730px;
-		padding-top: calc(50vh - 325px);
+		margin-top: 35px;
+		margin-left: 750px;
 	}
 	
 	.icons {
-		height: 70px;
-		width: 320px;
+		height: 80px;
+		width: 500px;
 	}
 	
 	.icons img {
+		height: 40px;
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -821,30 +890,38 @@ body {
   	}
 	  */
 
+	.frameContainer {
+		width: 650px;
+		height: 605px;
+	}
+
+
 	.frame {
 		width: 650px;
 		height: 550px;
+		margin-top: 27.5px;
 	}
 	
 	.exit {
 		height: 20px;
 		width: 20px;
-		padding-left: 590px;
-		padding-top: calc(50vh - 250px);
+		margin-left: 610px;
+		margin-top: 45px;
 	}
    
 	#rectangle {
-		margin-top: calc(50vh - 300px);
+		margin-top: 10px;
 		width:300px;
 		height:55px;
 		border-radius: 10px;
-		font-size: 11px;
 	}
 	
 	.songs {
 		width: 550px;
 		height: 430px;
-		margin-top: calc(50vh - 200px);;
+		margin-top: 110px;
+		padding-left: 50px;
+		padding-right: 50px;
 	}
 
 	#showsWindow {
@@ -855,7 +932,7 @@ body {
 	}
 
 	.showsFrame {
-		width: 700px;
+		width: 650px;
 		height: 550px;
 	}
 
@@ -868,8 +945,13 @@ body {
 	.exitShow {
 		height: 20px;
 		width: 20px;
-		padding-left: 645px;
-		padding-top: calc(50vh - 255px);
+		margin-left: 610px;
+		margin-top: 45px;
+	}
+
+	.aboutFrameContainer {
+		width: 600px;
+		height: 610px;
 	}
 
 	.aboutFrame {
@@ -881,24 +963,31 @@ body {
 		width: 500px;
 		height: 600px;
 		line-height: 30px;
+		padding-left: 50px;
+		padding-right: 50px;
 	}
 	
 	.bio h1 {
-		margin-top: calc(50vh - 40px);
+		margin-top: 280px;
 		font-size: 17px;
 		word-spacing: 2px;
 	}
 	
 	.pictureFrame {
 		height: 250px;
-		margin-top: calc(50vh - 315px);
+		margin-top: 5px;
 	}
 	
 	.exitAbout {
 		height: 17px;
 		width: 17px;
-		padding-left: 550px;
-		padding-top: calc(50vh - 280px);
+		margin-left: 560px;
+		margin-top: 35px;
+	}
+
+	.contactFrameContainer {
+		width: 650px;
+		height: 400px;
 	}
 
 	.contactFrame {
@@ -910,22 +999,21 @@ body {
 		width: 650px;
 		height: 400px;
 		line-height: 33px;
-		margin-top: calc(50vh - 200px);
 	}
 	
 	.contactInfo h1 {
-		font-size: 25px;
+		font-size: 30px;
 	}
 
 	.contactInfo h2 {
-		font-size: 15px;
+		font-size: 20px;
 	}
 
 	.exitContact {
 		height: 20px;
 		width: 20px;
-		padding-left: 600px;
-		padding-top: calc(50vh - 180px);
+		margin-left: 610px;
+		margin-top: 20px;
 	}
 	
 	.musicimg {
@@ -979,8 +1067,14 @@ body {
 	}
 	
 	.icons {
-		height: 70px;
-		width: 320px;
+		height: 100px;
+		width: 500px;
+	}
+
+	.icons img {
+		height: 55px;
+		padding-left: 13px;
+		padding-right: 13px;
 	}
 }
 
@@ -997,31 +1091,43 @@ body {
 		z-index: 3;
   	}
 	  */
+
+	.frameContainer {
+		width: 525px;
+		height: 550px;
+	}
+
 	.frame {
 		width: 525px;
 		height: 500px;
+		margin-top: 25px;
 	}
 	
 	.exit {
 		height: 20px;
 		width: 20px;
-		padding-left: 470px;
-		padding-top: calc(50vh - 235px);
+		margin-left: 487px;
+		margin-top: 40px;
 	}
   
 	#rectangle {
-		margin-top: calc(50vh - 275px);
+		margin-top: 10px;
 		width:280px;
 		height:50px;
 		border: 3px solid black;
 		border-radius: 10px;
-		font-size: 11px;
+	}
+
+	.inventory {
+		font-size: 20px;
 	}
 	
 	.songs {
-		width: 550px;
+		width: 475px;
 		height: 400px;
-		margin-top: calc(50vh - 180px);;
+		margin-top: 100px;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 
 
@@ -1033,8 +1139,8 @@ body {
 	}
 
 	.showsFrame {
-		width: 600px;
-		height: 525px;
+		width: 525px;
+		height: 500px;
 	}
 
 	.showsWrapper {
@@ -1046,14 +1152,10 @@ body {
 	.exitShow {
 		height: 17px;
 		width: 17px;
-		padding-left: 555px;
-		padding-top: calc(50vh - 245px);
+		margin-left: 490px;
+		margin-top: 45px;
 	}
-	
-	.aboutFrame {
-		width: 600px;
-		height: 600px;
-	}
+
 	
 	.bio {
 		width: 500px;
@@ -1062,7 +1164,6 @@ body {
 	}
 	
 	.bio h1 {
-		margin-top: calc(50vh - 40px);
 		font-size: 17px;
 		word-spacing: 2px;
 		text-shadow: -1px 1px 0 #292929,
@@ -1073,26 +1174,28 @@ body {
 	
 	.pictureFrame {
 		height: 250px;
-		margin-top: calc(50vh - 315px);
 	}
 	
 	.exitAbout {
 		height: 20px;
 		width: 20px;
-		padding-left: 535px;
-		padding-top: calc(50vh - 280px);
+		margin-left: 555px;
+	}
+
+	.contactFrameContainer {
+		width: 450px;
+		height: 300px
 	}
 	
 	.contactFrame {
 		width: 450px;
-		height: 400px;
+		height: 300px;
 	}
 
 	.contactInfo {
 		width: 450px;
-		height: 400px;
-		line-height: 33px;
-		margin-top: calc(50vh - 200px);
+		height: 300px;
+		line-height: 30px;
 	}
 	
 	.contactInfo h1 {
@@ -1106,8 +1209,8 @@ body {
 	.exitContact {
 		height: 20px;
 		width: 20px;
-		padding-left: 400px;
-		padding-top: calc(50vh - 180px);
+		margin-left: 415px;
+		margin-top: 20px;
 	}
 	
 	.icons {
@@ -1137,17 +1240,27 @@ body {
 	.ogBG {
 		margin-top: 30px;
 	}
+
+	.frameContainer {
+		position: relative;
+		height: 640px;
+		width: 380px;
+		margin: auto;
+		padding: none;
+	}
 	
 	.frame {
+		margin-top: 25px;
+		position: absolute;
 		width: 380px;
 		height: 590px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
 	}
 
 	#rectangle {
-		margin-top: calc(((100vh - 590px)/2) - 20px);
+		position: absolute;
+		margin-top: 5px;
+		left: 50%;
+		transform: translateX(-50%);
 		width: 200px;
 		height: 50px;
 		border: 3px solid black;
@@ -1163,17 +1276,22 @@ body {
 	}
 
 	.exit {
+		position: absolute;
 		height: 20px;
 		width: 20px;
-		padding-left: 330px;
-		margin-top: calc(((100vh - 590px)/2) - 200px);
+		padding-left: 0px;
+		margin-left: 347px;
+		margin-top: 40px;
+		padding-top: 0px;
 	}
 	
 	.songs {
+		position: absolute;
 		z-index: 4;
-		width: 400px;
+		width: 380px;
 		height: 540px;
-		margin-top: calc(((100vh - 590px)/2) + 40px);
+		margin-top: 65px;
+		padding: 0;
 	}
 
 	#showsWindow {
@@ -1200,26 +1318,31 @@ body {
 	.exitShow {
 		height: 18px;
 		width: 18px;
-		padding-left: 330px;
-		padding-top: calc(50% - 147px);
+		margin-left: 350px;
+		margin-top: 40px;
+	}
+
+	.aboutFrameContainer {
+		width: 380px;
+		height: 560px;
 	}
 
 	.aboutFrame {
 		width: 380px;
 		height: 550px;
-		overflow: hidden;
-		padding: none;
-		margin: auto;
+		margin-top: 10px;
 	}
 	
 	.bio {
 		width: 330px;
 		height: 600px;
 		line-height: 25px;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 	
 	.bio h1 {
-		margin-top: calc(50% + 135px);
+		margin-top: 265px;
 		font-size: 13.5px;
 		word-spacing: 2px;
 		text-shadow: -1px 1px 0 #292929,
@@ -1230,14 +1353,18 @@ body {
 	
 	.pictureFrame {
 		height: 250px;
-		margin-top: calc(50% - 125px);
 	}
 	
 	.exitAbout {
 		height: 20px;
 		width: 20px;
-		padding-left: 330px;
-		padding-top: calc(50% - 130px);
+		margin-left: 345px;
+		margin-top: 25px;
+	}
+
+	.contactFrameContainer {
+		width: 360px;
+		height: 200px;
 	}
 
 	.contactFrame {
@@ -1249,7 +1376,6 @@ body {
 		width: 360px;
 		height: 200px;
 		line-height: 28px;
-		margin-top: calc(50% + 35px);
 	}
 	
 	.contactInfo h1 {
@@ -1265,16 +1391,16 @@ body {
 		font-size: 10px;
 		word-spacing: 3px;
 		text-shadow: -1px 1px 0 #292929,
-		2px 2px 0 #292929,
+		1px 1px 0 #292929,
 		1px -1px 0 #292929,
 		-1px -1px 0 #292929;
 	}
 
 	.exitContact {
-		height: 20px;
-		width: 20px;
-		padding-left: 310px;
-		padding-top: calc(50% + 45px);
+		height: 17px;
+		width: 17px;
+		margin-left: 330px;
+		margin-top: 15px;
 	}
 	
 	.musicimg {
@@ -1366,13 +1492,19 @@ body {
   	}
 	  */
 
+	.frameContainer {
+		width: 350px;
+		height: 600px;
+	}
+
 	.frame {
 		width: 350px;
 		height: 550px;
+		margin-top: 25px;
 	}
 
 	#rectangle {
-		margin-top: calc(50vh - 290px);
+		margin-top: 10px;
 		width: 200px;
 		height: 50px;
 		border: 3px solid black;
@@ -1390,14 +1522,14 @@ body {
 	.exit {
 		height: 15px;
 		width: 15px;
-		padding-left: calc(50vw + 120px);
-		padding-top: calc(50vh - 260px);
+		margin-left: 320px;
+		margin-top: 37px;
 	}
   
 	.songs {
 		width: 350px;
 		height: 500px;
-		margin-top: calc(50vh - 230px);
+		margin-top: 70px;
 	}
 
 	#showsWindow {
@@ -1421,10 +1553,15 @@ body {
 	.exitShow {
 		height: 15px;
 		width: 15px;
-		padding-left: calc(50vw + 120px);
-		padding-top: calc(50vh - 255px);
+		margin-left: 322px;
+		margin-top: 40px;
 	}
 	
+	.aboutFrameContainer {
+		width: 350px;
+		height: 560px;
+	}
+
 	.aboutFrame {
 		width: 350px;
 		height: 550px;
@@ -1437,7 +1574,7 @@ body {
 	}
 	
 	.bio h1 {
-		margin-top: calc(50vh - 40px);
+		margin-top: 255px;
 		font-size: 13px;
 		word-spacing: 2px;
 		text-shadow: -1px 1px 0 #292929,
@@ -1448,14 +1585,17 @@ body {
 	
 	.pictureFrame {
 		height: 225px;
-		margin-top: calc(50vh - 290px);
 	}
 	
 	.exitAbout {
 		height: 15px;
 		width: 15px;
-		padding-left: calc(50vw + 120px);
-		padding-top: calc(50vh - 260px);
+		margin-left: 320px;
+	}
+
+	.contactFrameContainer {
+		width: 340px;
+		height: 200px;
 	}
 
 	.contactFrame {
@@ -1467,7 +1607,6 @@ body {
 		width: 340px;
 		height: 200px;
 		line-height: 28px;
-		margin-top: calc(50vh - 100px);
 	}
 	
 	.contactInfo h1 {
@@ -1481,8 +1620,8 @@ body {
 	.exitContact {
 		height: 15px;
 		width: 15px;
-		padding-left: 300px;
-		padding-top: calc(50vh - 90px);
+		margin-left: 312px;
+		margin-top: 15px;
 	}
 	
 	.musicimg {

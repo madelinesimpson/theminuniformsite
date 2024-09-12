@@ -93,6 +93,7 @@
     }
     
     .songtitle {
+        line-height: 17px;
         margin-top: 0;
         text-align: center;
         height: 37.5px;
