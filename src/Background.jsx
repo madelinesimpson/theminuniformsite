@@ -121,51 +121,59 @@ export default function Background () {
                 <img className={`cloudimg5 ${classNamesCloud}`} src={cloudTwo}/>
             </div>
             <div id="musicWindow" style={{ display: toggle ? 'none' : 'flex' }}>
-                <img className="frame" src={settings}/>
-                <div id="rectangle"><h1 className="inventory">Music Inventory</h1></div>
-                <div className="songs">
-                    <SongCard coverUrl={footprintPic} songtitle="Footprint" link="https://hypeddit.com/theminuniform/footprint-1"/>
-                    <SongCard coverUrl={ltjPic} songtitle="A Letter to Jack" link="https://hypeddit.com/theminuniform/alettertojack"/>
-                    <SongCard coverUrl={mystery} songtitle="Heart Tattoo" />
-                    <SongCard coverUrl={mystery} songtitle="First of Many" />
-                    <SongCard coverUrl={mystery} songtitle="Raisins" />
+                <div className= "frameContainer">
+                    <img className="frame" src={settings}/>
+                    <div id="rectangle"><h1 className="inventory">Music Inventory</h1></div>
+                    <div className="songs">
+                        <SongCard coverUrl={footprintPic} songtitle="Footprint" link="https://hypeddit.com/theminuniform/footprint-1"/>
+                        <SongCard coverUrl={ltjPic} songtitle="A Letter to Jack" link="https://hypeddit.com/theminuniform/alettertojack"/>
+                        <SongCard coverUrl={mystery} songtitle="Heart Tattoo" />
+                        <SongCard coverUrl={mystery} songtitle="First of Many" />
+                        <SongCard coverUrl={mystery} songtitle="Raisins" />
+                    </div>
+                    <img className="exit" src={exit} onClick={musicPopup}/>
                 </div>
-                <img className="exit" src={exit} onClick={musicPopup}/>
             </div>
             <div id="showsWindow" style={{ display: showstoggle ? 'none' : 'flex' }}>
-                <div id="rectangle"><h1 className="inventory">Shows Inventory</h1></div>
-                <div className="biggerWrapper">
-                <img className="showsFrame" src={settings}/>
-                <div className="showsWrapper">          
-                    <div className="showsList">
-                        <Show />
+                <div className= "frameContainer">
+                    <div id="rectangle"><h1 className="inventory">Shows Inventory</h1></div>
+                    <img className="exitShow" src={exit} onClick={showsPopup}/>
+                    <div className="biggerWrapper">
+                        <img className="showsFrame" src={settings}/>
+                        <div className="showsWrapper">          
+                            <div className="showsList">
+                                <Show />
+                            </div>
+                        </div>  
                     </div>
-                </div>  
                 </div>
-                <img className="exitShow" src={exit} onClick={showsPopup}/>
             </div>
             <div id="aboutWindow" style={{ display: abouttoggle ? 'none' : 'flex' }}>
-                <img className="aboutFrame" src={settings}/>
-                <div className="bio">
-                    <h1>Them in Uniform is a spirited indie rock trio formed by Georgia Tech students Madeline Simpson and Eli Scornik, 
-                        who bring a dynamic blend of vocals and guitar, complemented by the rhythmic precision of drummer Tyler Morgan. 
-                        The band infuses traditional indie rock with a touch of angst that resonates with college students and rock aficionados 
-                        alike. With each performance, Them in Uniform invites listeners to join their sonic journey, where rock meets a dash 
-                        of collegiate charm.</h1>
+                <div className="aboutFrameContainer">
+                    <img className="aboutFrame" src={settings}/>
+                    <div className="bio">
+                        <h1>Them in Uniform is a spirited indie rock trio formed by Georgia Tech students Madeline Simpson and Eli Scornik, 
+                            who bring a dynamic blend of vocals and guitar, complemented by the rhythmic precision of drummer Tyler Morgan. 
+                            The band infuses traditional indie rock with a touch of angst that resonates with college students and rock aficionados 
+                            alike. With each performance, Them in Uniform invites listeners to join their sonic journey, where rock meets a dash 
+                            of collegiate charm.</h1>
                         <img className="pictureFrame" src={pictureFrame}/>
                 </div>
                 <img className="exitAbout" src={exit} onClick={aboutPopup}/>
+                </div>
             </div>
             <div id="contactWindow" style={{display: contacttoggle ? 'none' : 'flex'}}>
-                <img className="contactFrame" src={settings}/>
-                <div className="contactInfo">
-                    <h1>Email for information and booking:
-                    <br></br>
-                    contact@theminuniform.com
-                    </h1>
-                    <h2>(We also respond to Instagram DMs @theminuniform)</h2>
+                <div className = "contactFrameContainer">
+                    <img className="contactFrame" src={settings}/>
+                    <div className="contactInfo">
+                        <h1>Email for information and booking:
+                        <br></br>
+                        contact@theminuniform.com
+                        </h1>
+                        <h2>(We also respond to Instagram DMs @theminuniform)</h2>
+                    </div>
+                    <img className="exitContact" src={exit} onClick={contactPopup}/>
                 </div>
-                <img className="exitContact" src={exit} onClick={contactPopup}/>
             </div>
             <div className={`music ${classNamesOG} ${classNamesDim}`}>
                 <img className="musicimg" src={music} onClick={musicPopup}/>
