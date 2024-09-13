@@ -26,6 +26,9 @@ import subscribe from './assets/subscribe.png'
 import plane from './assets/plane.png'
 import Show from './Show.jsx'
 import { render } from 'react-dom'
+import mike from './assets/mike.jpg'
+
+
 
 
 export default function Background () {
@@ -107,12 +110,8 @@ export default function Background () {
     return  (
         <>
             <div className={`ogBG ${classNamesOG} ${classNamesDim}`}></div>
-            {/*<div className={`reverseBG ${classNamesReverse}`}></div>*/}
+            <div className={`reverseBG ${classNamesReverse}`}></div>
             <div className={`blueBG ${classNamesDim}`}></div>
-            <div className={`title ${classNamesOG} ${classNamesDim}`}>
-                <img className="titleImg" src={title}/>
-                {/*<img className={`plane ${classNamesCloud}`} src={plane}/>*/}
-            </div>
             <div className={`cloud ${classNamesDim}`}>
                 <img className={`cloudimg1 ${classNamesCloud}`} src={cloudOne}/>
                 <img className={`cloudimg2 ${classNamesCloud}`} src={cloudTwo}/>
@@ -175,6 +174,16 @@ export default function Background () {
                     <img className="exitContact" src={exit} onClick={contactPopup}/>
                 </div>
             </div>
+            <div className={`mike ${classNamesReverse}`}>
+                <img className="mikeImg" src={mike}></img>
+            </div>
+            <div className={`title ${classNamesOG} ${classNamesDim}`}>
+                <img className="titleImg" src={title}/>
+                {/*<img className={`plane ${classNamesCloud}`} src={plane}/>*/}
+            </div>
+            <div className="arrowSignContainer">
+                <div className="arrowSign" onClick={doBoth}></div>
+            </div>
             <div className={`music ${classNamesOG} ${classNamesDim}`}>
                 <img className="musicimg" src={music} onClick={musicPopup}/>
             </div>
@@ -192,12 +201,8 @@ export default function Background () {
                     <img className="subscribeimg" src={subscribe}/>
                 </a>
             </div>
-            {/*<div className="arrowSign" onClick={doBoth}>
-            </div>*/}
+            
             <div className={`socials ${classNamesDim}`}>
-                {/*<div className="scroll">
-                    <img className="scrollimg" src={scroll} />
-            </div>*/}
                 <div className="icons">
                     <a href="https://www.instagram.com/theminuniform" target="_blank">
                         <img className="instagram" src={instagram}/>
