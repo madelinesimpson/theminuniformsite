@@ -24,8 +24,8 @@ body {
 	min-height: 100%;
 	min-width: 100%;
 	overflow: hidden;
-	padding: none;
-	margin-left: none;
+	padding: 0;
+	margin-left: 0;
 	z-index: 1;
 }
 
