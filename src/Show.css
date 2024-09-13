@@ -1,4 +1,5 @@
-@media (max-width: 1920px) {
+@media screen and (max-width: 1920px),
+    screen and (max-height: 900px) {
     .show {    
         z-index: 3;
         display: grid;
@@ -37,8 +38,8 @@
     }
 }
 
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px),
+	screen and (max-height: 800px) {
     .show {    
         z-index: 3;
         display: grid;
@@ -73,7 +74,8 @@
     }
 }
 
-@media  (max-width: 900px) {
+@media screen and (max-width: 900px),
+	screen and (max-height: 700px) {
     .show {    
         z-index: 3;
         display: grid;
@@ -107,7 +109,8 @@
     }
 }
 
-@media  (max-width: 768px) {
+@media screen and (max-width: 768px),
+    screen and (max-height: 600px) {
     .show {    
         z-index: 3;
         display: grid;
@@ -140,7 +143,8 @@
     }
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 490px),
+    screen and (max-height: 500px) {
     .show {    
         z-index: 3;
         display: grid;
@@ -175,7 +179,8 @@
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 390px),
+    screen and (max-height: 400px) {
     .show {    
         z-index: 3;
         display: grid;

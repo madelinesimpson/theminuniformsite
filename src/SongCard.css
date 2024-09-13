@@ -1,4 +1,5 @@
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1920px),
+    screen and (max-height: 900px) {
     .card {
         background:#e3b476;
         border: 2px solid black;
@@ -33,7 +34,8 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px),
+	screen and (max-height: 800px) {
     .card {
         background:#e3b476;
         border: 2px solid black;
@@ -68,7 +70,8 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px),
+	screen and (max-height: 700px) {
     .card {
         background:#e3b476;
         border: 2px solid black;
@@ -103,7 +106,8 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px),
+    screen and (max-height: 600px){
     .card {
         background:#e3b476;
         border: 2px solid black;
@@ -140,7 +144,8 @@
     }
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 490px),
+    screen and (max-height: 500px) {
     .card {
         background:#e3b476;
         border: 2px solid black;
@@ -179,7 +184,8 @@
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 390px),
+    screen and (max-height: 400px) {
     .card {
         background:#e3b476;
         border: 2px solid black;
