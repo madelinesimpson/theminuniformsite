@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
 
+* {
+	overflow:hidden;
+}
+
 
 body {
 	overflow: hidden;
@@ -1295,6 +1299,12 @@ body {
 	.ogBG {
 		margin-top: 30px;
 	}
+
+	.ogBG {
+		overflow: hidden;
+	}
+
+
 
 	.frameContainer {
 		position: relative;
