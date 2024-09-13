@@ -167,8 +167,8 @@ function EPK() {
         <section className="pressEPK">
           <div className="socialstats">
             <h3>HIGHLIGHTS</h3>
-            <p>01/30/24- Founders Eli Scornik and Madeline Simpson travel to Tampa to record debut EP "Hindsight" just a few weeks after meeting in a jam group at Georgia Tech</p><br></br>
-            <p>02/16/24 - With Tyler Morgan on the drums, the newly formed trio plays their debut show to an eager crowd of nearly 100 friends and fans</p><br></br>
+            <p>01/30/24- Founders Eli Scornik and Madeline Simpson travel to Tampa to record debut EP "Hindsight" just a few weeks after meeting in a jam group at Georgia Tech</p>
+            <p>02/16/24 - With Tyler Morgan on the drums, the newly formed trio plays their debut show to an eager crowd of nearly 100 friends and fans</p>
             <p>04/04/24 - The group sells out their 4th show ever as the headliner at Smith's Olde Bar</p>
             <p>04/05/24 - "Footprint," the first single off of "Hindsight," is released on all platforms</p>
             <p>05/24/24 - The second single "A Letter to Jack" is released on all platforms</p>
