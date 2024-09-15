@@ -107,7 +107,8 @@
 }
 
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1920px),
+screen and (max-height: 900px) {
 	.titleImg {
 		position: absolute;
 		height: 175px;
@@ -129,7 +130,6 @@
 }
 
 @media screen and (max-height: 750px) {
-
 	.arrowSign {
 		margin-top: 74vh;
 		height: 17vh;
@@ -143,8 +143,8 @@
 	}
 }
 
-@media screen and (max-width: 1200px) {
-	
+@media screen and (max-width: 1200px),
+screen and (max-height: 800px) {
 	.titleImg {
 		position: absolute;
 		height:175px;
@@ -152,15 +152,21 @@
 	}
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px),
+screen and (max-height: 700px) {
 	.titleImg {
 		position: absolute;
-		height: 175px;
+		height: 150px;
 		margin-top: 50px;
+	}
+	
+	.arrowSign {
+		display:none;
 	}
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 490px),
+screen and (max-height: 500px) {
 	.titleImg {
 		position: absolute;
 		width: 350px;
@@ -169,7 +175,9 @@
 	}
 }
 
-@media screen and (max-width: 390px) {
+
+@media screen and (max-width: 390px),
+screen and (max-height: 400px) {
 	.titleImg {
 		position: absolute;
 		width: 300px;
@@ -929,6 +937,7 @@
 
 @media screen and (max-width: 900px),
 	screen and (max-height: 700px) {
+
 	/*
 	.plane {
 		position: absolute;
