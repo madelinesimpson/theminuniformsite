@@ -18,7 +18,6 @@ import tiktok from './assets/Tiktok.png'
 import facebook from './assets/Facebook.png'
 import spotify from './assets/Spotify.png'
 import apple from './assets/Apple.png'
-import React, { useState } from 'react'
 import SongCard from './SongCard.jsx'
 import pictureFrame from './assets/pixel frame.png'
 import contact from './assets/contact.png'
@@ -27,19 +26,18 @@ import plane from './assets/plane.png'
 import Show from './Show.jsx'
 import { render } from 'react-dom'
 import mike from './assets/mike.jpg'
+import ogBackground from './assets/sitebg.gif'
+import React, { useState, useEffect } from 'react'
 
 
 
 
-export default function Background () {
+export default function Home () {
+
     const [toggle, setToggle] = useState(true);
     const [showstoggle, setShowsToggle] = useState(true);
     const [abouttoggle, setAboutToggle] = useState(true);
     const [contacttoggle, setContactToggle] = useState(true);
-    const [classNamesOG, setClassNamesOG] = useState("");
-    const [classNamesReverse, setClassNamesReverse] = useState("");
-    const [classNamesCloud, setClassNamesCloud] = useState("");
-    const [classNamesDim, setClassNamesDim] = useState("");
 
     const musicPopup = () => {
         if(toggle==false) {
@@ -81,6 +79,11 @@ export default function Background () {
         dimBG();
     };
 
+    const [classNamesOG, setClassNamesOG] = useState("");
+    const [classNamesReverse, setClassNamesReverse] = useState("");
+    const [classNamesCloud, setClassNamesCloud] = useState("");
+    const [classNamesDim, setClassNamesDim] = useState("");
+
     const startStopAnimationOG = () => {
         setClassNamesOG(classNamesOG ? "" : "animationog");
     };
@@ -112,6 +115,7 @@ export default function Background () {
             <div className={`ogBG ${classNamesOG} ${classNamesDim}`}></div>
             <div className={`reverseBG ${classNamesReverse}`}></div>
             <div className={`blueBG ${classNamesDim}`}></div>
+
             <div className={`cloud ${classNamesDim}`}>
                 <img className={`cloudimg1 ${classNamesCloud}`} src={cloudOne}/>
                 <img className={`cloudimg2 ${classNamesCloud}`} src={cloudTwo}/>
@@ -119,6 +123,7 @@ export default function Background () {
                 <img className={`cloudimg4 ${classNamesCloud}`} src={cloudFour}/>
                 <img className={`cloudimg5 ${classNamesCloud}`} src={cloudTwo}/>
             </div>
+
             <div id="musicWindow" style={{ display: toggle ? 'none' : 'flex' }}>
                 <div className= "frameContainer">
                     <img className="frame" src={settings}/>
@@ -133,6 +138,7 @@ export default function Background () {
                     <img className="exit" src={exit} onClick={musicPopup}/>
                 </div>
             </div>
+
             <div id="showsWindow" style={{ display: showstoggle ? 'none' : 'flex' }}>
                 <div className= "frameContainer">
                     <div id="rectangle"><h1 className="inventory">Shows Inventory</h1></div>
@@ -147,6 +153,7 @@ export default function Background () {
                     </div>
                 </div>
             </div>
+
             <div id="aboutWindow" style={{ display: abouttoggle ? 'none' : 'flex' }}>
                 <div className="aboutFrameContainer">
                     <img className="aboutFrame" src={settings}/>
@@ -161,6 +168,7 @@ export default function Background () {
                 <img className="exitAbout" src={exit} onClick={aboutPopup}/>
                 </div>
             </div>
+
             <div id="contactWindow" style={{display: contacttoggle ? 'none' : 'flex'}}>
                 <div className = "contactFrameContainer">
                     <img className="contactFrame" src={settings}/>
@@ -174,28 +182,36 @@ export default function Background () {
                     <img className="exitContact" src={exit} onClick={contactPopup}/>
                 </div>
             </div>
+
             <div className={`mike ${classNamesReverse}`}>
                 <img className="mikeImg" src={mike}></img>
             </div>
+
             <div className={`title ${classNamesOG} ${classNamesDim}`}>
                 <img className="titleImg" src={title}/>
                 {/*<img className={`plane ${classNamesCloud}`} src={plane}/>*/}
             </div>
+
             <div className="arrowSignContainer">
                 <div className="arrowSign" onClick={doBoth}></div>
             </div>
+
             <div className={`music ${classNamesOG} ${classNamesDim}`}>
                 <img className="musicimg" src={music} onClick={musicPopup}/>
             </div>
+
             <div className={`shows ${classNamesOG} ${classNamesDim}`}>
                 <img className="showsimg" src={shows} onClick={showsPopup}/>
             </div>
+
             <div className={`about ${classNamesOG} ${classNamesDim}`}>
                 <img className="aboutimg" src={about} onClick={aboutPopup}/>
             </div>
+
             <div className={`contact ${classNamesOG} ${classNamesDim}`}>
                 <img className="contactimg" src={contact} onClick={contactPopup}/>
             </div>
+
             <div className={`subscribe ${classNamesOG} ${classNamesDim}`}>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScmnhT58EkjcDDn1lKNKMcin7W0SQ3fppac1OoK2cwSv9TN6w/viewform?usp=sf_link" target="_blank">
                     <img className="subscribeimg" src={subscribe}/>
@@ -224,6 +240,7 @@ export default function Background () {
                     </a>
                 </div>
             </div>
+
         </>
     );
 }

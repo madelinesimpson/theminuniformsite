@@ -1,23 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
 
-* {
-	overflow:hidden;
-}
+.spinner-div {
+	position: relative;
+	width: 100vw; /* Adjust width and height as needed */
+	height: 100vh;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	overflow: visible;
+  }
 
-
-body {
-	overflow: hidden;
-	overscroll-behavior-x: none;
-	overscroll-behavior-y: none;
-}
-
-.App {
-	overflow: hidden;
-	padding: none;
-	margin: none;
-	overscroll-behavior-x: none;
-	overscroll-behavior-y: none;
-}
 
 .ogBG {
 	background-image: url('./assets/sitebg.gif');
@@ -1303,7 +1296,6 @@ body {
 	.ogBG {
 		overflow: hidden;
 	}
-
 
 
 	.frameContainer {
