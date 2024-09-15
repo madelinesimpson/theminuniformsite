@@ -1,23 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap');
 
-* {
-	overflow:hidden;
-}
+.spinner-div {
+	position: relative;
+	width: 100vw; /* Adjust width and height as needed */
+	height: 100vh;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	overflow: visible;
+  }
 
-
-body {
-	overflow: hidden;
-	overscroll-behavior-x: none;
-	overscroll-behavior-y: none;
-}
-
-.App {
-	overflow: hidden;
-	padding: none;
-	margin: none;
-	overscroll-behavior-x: none;
-	overscroll-behavior-y: none;
-}
 
 .ogBG {
 	background-image: url('./assets/sitebg.gif');
@@ -114,7 +107,8 @@ body {
 }
 
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1920px),
+screen and (max-height: 900px) {
 	.titleImg {
 		position: absolute;
 		height: 175px;
@@ -136,7 +130,6 @@ body {
 }
 
 @media screen and (max-height: 750px) {
-
 	.arrowSign {
 		margin-top: 74vh;
 		height: 17vh;
@@ -150,8 +143,8 @@ body {
 	}
 }
 
-@media screen and (max-width: 1200px) {
-	
+@media screen and (max-width: 1200px),
+screen and (max-height: 800px) {
 	.titleImg {
 		position: absolute;
 		height:175px;
@@ -159,15 +152,21 @@ body {
 	}
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px),
+screen and (max-height: 700px) {
 	.titleImg {
 		position: absolute;
-		height: 175px;
+		height: 150px;
 		margin-top: 50px;
+	}
+	
+	.arrowSign {
+		display:none;
 	}
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 490px),
+screen and (max-height: 500px) {
 	.titleImg {
 		position: absolute;
 		width: 350px;
@@ -176,7 +175,9 @@ body {
 	}
 }
 
-@media screen and (max-width: 390px) {
+
+@media screen and (max-width: 390px),
+screen and (max-height: 400px) {
 	.titleImg {
 		position: absolute;
 		width: 300px;
@@ -936,6 +937,7 @@ body {
 
 @media screen and (max-width: 900px),
 	screen and (max-height: 700px) {
+
 	/*
 	.plane {
 		position: absolute;
@@ -1303,7 +1305,6 @@ body {
 	.ogBG {
 		overflow: hidden;
 	}
-
 
 
 	.frameContainer {

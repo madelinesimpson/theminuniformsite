@@ -5,7 +5,6 @@
 
 body {
     background: black;
-    overflow-y: auto;
 }
 
 .epkHeader {
@@ -743,7 +742,7 @@ body {
         font-size: 16px;
         text-decoration: underline;
         text-align: center;
-        margin-bottom: 0px;
+        margin-bottom: -15px;
     }
 
     .socialstats > p {
@@ -752,7 +751,7 @@ body {
         font-size: 13px;
         width: 500px;
         margin: auto;
-        padding: 10px;
+        padding-top: 30px;
         height: 3vh;
     }
 
@@ -771,6 +770,7 @@ body {
         font-weight: 500;
 
     }
+
 
     .achievements {
         text-align: center;
@@ -957,7 +957,6 @@ body {
         font-size: 13px;
         width: 500px;
         margin: auto;
-        padding: 10px;
         height: 3vh;
     }
 
@@ -1160,22 +1159,24 @@ body {
         color: #dedad9;
         margin: auto;
         margin-left: -5px;
+        margin-bottom: 20px;
     }
 
     .socialstats > h3 {
-        margin-top: 50px;
+        margin-top: 60px;
         font-size: 14px;
         text-decoration: underline;
         text-align: center;
-        margin-bottom: 0px;
+        margin-bottom: -20px;
     }
 
     .socialstats > p {
         margin: auto;
         text-align: center;
-        line-height: 15px;
+        line-height: 17px;
         font-size: 12px;
         width: 360px;
+        padding-top: 35px;
         overflow-wrap: break-word;
     }
 
