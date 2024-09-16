@@ -9,7 +9,7 @@ import {
 import React, { useState, useEffect } from 'react'
 import { RotatingLines } from "react-loader-spinner";
 import siteBG from './assets/sitebg.gif'
-import smiths from './assets/smiths.jpg'
+import smiths from './assets/smithsfade.png'
 
 
 function App() {
