@@ -37,8 +37,8 @@ function EPK() {
 
     const aboutFadeInPoint = 500;
     const aboutFadeInEndPoint = 550;
-    const aboutFadeOutStartPoint = 1050;
-    const aboutFadeOutEndPoint = 1150;
+    const aboutFadeOutStartPoint = 1550;
+    const aboutFadeOutEndPoint = 1650;
     let newAboutOpacity;
 
     if (width > 1480) {   
@@ -58,8 +58,8 @@ function EPK() {
  
         const musicFadeInPoint = 1100;
         const musicFadeInEndPoint = 1200;
-        const musicFadeOutStartPoint = 2500;
-        const musicFadeOutEndPoint = 2600;
+        const musicFadeOutStartPoint = 3300;
+        const musicFadeOutEndPoint = 3400;
 
         let newMusicOpacity;
 
@@ -179,10 +179,7 @@ function EPK() {
           </div>
           <div className="achievements">
             <h3>UPCOMING SHOWS</h3>
-            <p>Boggs Social & Supply - Atlanta, GA - 09/28/24</p>
-            <p>Boggs Social & Supply - Atlanta, GA - 10/13/24</p>
-            <p>David's 105 - Monroe, GA - 10/04/24</p>
-            <h5>The group had to turn down offers to play at The Masquerade, The Vinyl, and 529 EAV this summer due to scheduling conflicts, but they plan to play these venues in the fall (dates not solidifed yet) </h5>
+            <p>The Vinyl - Atlanta, GA - 01/29/25</p>
           </div>
           <p className="contactus">Contact us: <br></br>contact@theminuniform.com</p>
         </section>

@@ -92,7 +92,7 @@ function HomePageWithOverflow() {
     document.body.style.overflow = "hidden";
 
     return () => {
-      document.body.style.overflow = "auto";  // Cleanup when component is unmounted
+      document.body.style.overflow = "auto"; 
     };
   }, []);
 
