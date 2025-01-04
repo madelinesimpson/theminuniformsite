@@ -27,6 +27,7 @@ import Show from './Show.jsx'
 import { render } from 'react-dom'
 import mike from './assets/mike.jpg'
 import ogBackground from './assets/sitebg.gif'
+import htcover from './assets/htcover.jpeg'
 import React, { useState, useEffect } from 'react'
 
 
@@ -131,7 +132,7 @@ export default function Home () {
                     <div className="songs">
                         <SongCard coverUrl={footprintPic} songtitle="Footprint" link="https://hypeddit.com/theminuniform/footprint-1"/>
                         <SongCard coverUrl={ltjPic} songtitle="A Letter to Jack" link="https://hypeddit.com/theminuniform/alettertojack"/>
-                        <SongCard coverUrl={mystery} songtitle="Heart Tattoo" />
+                        <SongCard coverUrl={htcover} songtitle="Heart Tattoo" link = "https://distrokid.com/hyperfollow/theminuniform/heart-tattoo"/>
                         <SongCard coverUrl={mystery} songtitle="First of Many" />
                         <SongCard coverUrl={mystery} songtitle="Raisins" />
                     </div>
