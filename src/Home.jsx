@@ -28,6 +28,12 @@ import { render } from 'react-dom'
 import mike from './assets/mike.jpg'
 import ogBackground from './assets/sitebg.gif'
 import htcover from './assets/htcover.jpeg'
+import thinktwice from './assets/thinktwice.png'
+import lookaround from './assets/lookaround.png'
+import freeway from './assets/freeway.png'
+import curranst from './assets/curranst.png'
+import ninetofive from './assets/9to5.png'
+import crowd from './assets/Crowd.jpeg'
 import React, { useState, useEffect } from 'react'
 
 
@@ -130,11 +136,12 @@ export default function Home () {
                     <img className="frame" src={settings}/>
                     <div id="rectangle"><h1 className="inventory">Music Inventory</h1></div>
                     <div className="songs">
-                        <SongCard coverUrl={footprintPic} songtitle="Footprint" link="https://hypeddit.com/theminuniform/footprint-1"/>
-                        <SongCard coverUrl={ltjPic} songtitle="A Letter to Jack" link="https://hypeddit.com/theminuniform/alettertojack"/>
+                        <SongCard coverUrl={ninetofive} songtitle="9 to 5" link = "https://open.spotify.com/track/77rMVHmLWybDnuzuuWnpRm?si=005f8f902d4241ea"/>
+                        <SongCard coverUrl={curranst} songtitle="Curran St" link = "https://hypeddit.com/theminuniform/curranst"/>
+                        <SongCard coverUrl={thinktwice} songtitle="Think Twice" link = "https://hypeddit.com/theminuniform/thinktwice"/>
+                        <SongCard coverUrl={lookaround} songtitle="Look Around" link = "https://hypeddit.com/theminuniform/lookaround"/>
+                        <SongCard coverUrl={freeway} songtitle="Freeway" link = "https://hypeddit.com/theminuniform/freeway"/>
                         <SongCard coverUrl={htcover} songtitle="Heart Tattoo" link = "https://distrokid.com/hyperfollow/theminuniform/heart-tattoo"/>
-                        <SongCard coverUrl={mystery} songtitle="First of Many" />
-                        <SongCard coverUrl={mystery} songtitle="Raisins" />
                     </div>
                     <img className="exit" src={exit} onClick={musicPopup}/>
                 </div>
@@ -159,11 +166,7 @@ export default function Home () {
                 <div className="aboutFrameContainer">
                     <img className="aboutFrame" src={settings}/>
                     <div className="bio">
-                        <h1>Them in Uniform is a spirited indie rock trio formed by Georgia Tech students Madeline Simpson and Eli Scornik, 
-                            who bring a dynamic blend of vocals and guitar, complemented by the rhythmic precision of drummer Tyler Morgan. 
-                            The band infuses traditional indie rock with a touch of angst that resonates with college students and rock aficionados 
-                            alike. With each performance, Them in Uniform invites listeners to join their sonic journey, where rock meets a dash 
-                            of collegiate charm.</h1>
+                        <h1>Them in Uniform is a spirited Atlanta based indie rock group formed by Georgia Tech students Madeline Simpson and Eli Scornik. Blending melodic guitar and dynamic vocals with the driving rhythm section of drummer Read Fernandez and bassist Noam Belzer-Carroll, the four piece infuses traditional indie rock with a touch of angst that resonates with college students and rock aficionados alike. From humble beginnings performing at a local chicken joint to selling out headlining hometown performances at The Masquerade, Smith’s Olde Bar, and 529, Them in Uniform brings palpable energy to every venue, with audience members singing and moshing along to every song.</h1>
                         <img className="pictureFrame" src={pictureFrame}/>
                 </div>
                 <img className="exitAbout" src={exit} onClick={aboutPopup}/>
@@ -174,28 +177,28 @@ export default function Home () {
                 <div className = "contactFrameContainer">
                     <img className="contactFrame" src={settings}/>
                     <div className="contactInfo">
-                        <h1>Email for information and booking:
-                        <br></br>
-                        contact@theminuniform.com
+                        <h1>General: contact@theminuniform.com
                         </h1>
-                        <h2>(We also respond to Instagram DMs @theminuniform)</h2>
+                        <br></br>
+                        <h1>Management: anna@annadaug.com
+                        </h1>
                     </div>
                     <img className="exitContact" src={exit} onClick={contactPopup}/>
                 </div>
             </div>
 
-            <div className={`mike ${classNamesReverse}`}>
+            {/* <div className={`mike ${classNamesReverse}`}>
                 <img className="mikeImg" src={mike}></img>
-            </div>
+            </div> */}
 
             <div className={`title ${classNamesOG} ${classNamesDim}`}>
                 <img className="titleImg" src={title}/>
                 {/*<img className={`plane ${classNamesCloud}`} src={plane}/>*/}
             </div>
 
-            <div className="arrowSignContainer">
+            {/* <div className="arrowSignContainer">
                 <div className="arrowSign" onClick={doBoth}></div>
-            </div>
+            </div> */}
 
             <div className={`music ${classNamesOG} ${classNamesDim}`}>
                 <img className="musicimg" src={music} onClick={musicPopup}/>
@@ -203,6 +206,10 @@ export default function Home () {
 
             <div className={`shows ${classNamesOG} ${classNamesDim}`}>
                 <img className="showsimg" src={shows} onClick={showsPopup}/>
+            </div>
+
+            <div className={`shop ${classNamesOG} ${classNamesDim}`}>
+                <a href="https://them-in-uniform.square.site/s/shop"><img className="shopimg" src={shop}/></a>
             </div>
 
             <div className={`about ${classNamesOG} ${classNamesDim}`}>
@@ -213,11 +220,13 @@ export default function Home () {
                 <img className="contactimg" src={contact} onClick={contactPopup}/>
             </div>
 
-            <div className={`subscribe ${classNamesOG} ${classNamesDim}`}>
+
+
+            {/* <div className={`subscribe ${classNamesOG} ${classNamesDim}`}>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScmnhT58EkjcDDn1lKNKMcin7W0SQ3fppac1OoK2cwSv9TN6w/viewform?usp=sf_link" target="_blank">
                     <img className="subscribeimg" src={subscribe}/>
                 </a>
-            </div>
+            </div> */}
             
             <div className={`socials ${classNamesDim}`}>
                 <div className="icons">

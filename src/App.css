@@ -587,13 +587,13 @@ screen and (max-height: 400px) {
 	}
 	
 	.bio h1 {
-		font-size: 22px;
-		word-spacing: 3px;
+		font-size: 19px;
+		word-spacing: 1px;
 		text-shadow: -1px 1px 0 #292929,
 		2px 2px 0 #292929,
 		1px -1px 0 #292929,
 		-1px -1px 0 #292929;
-		margin-top: 400px;
+		margin-top: 390px;
 	}
 	
 	.pictureFrame {
@@ -762,6 +762,33 @@ screen and (max-height: 400px) {
 	}
 	
 	.aboutimg:hover {
+		filter: contrast(85%);
+		filter: brightness(130%);
+		height: 3.5vh;
+		margin-top: 3vh;
+	}
+
+	.shop {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		z-index: 1;
+		overflow: hidden;
+		margin-left: none;
+	}
+	
+	.shopimg {
+		height: 3vh;
+		margin-top: 3.5vh;
+		filter: saturate(100%);
+		filter: brightness(95%);
+		cursor: pointer;
+	}
+	
+	.shopimg:hover {
 		filter: contrast(85%);
 		filter: brightness(130%);
 		height: 3.5vh;
@@ -1009,8 +1036,8 @@ screen and (max-height: 400px) {
 	}
 	
 	.bio h1 {
-		font-size: 22px;
-		word-spacing: 3px;
+		font-size: 18px;
+		word-spacing: 1px;
 		text-shadow: -1px 1px 0 #292929,
 		2px 2px 0 #292929,
 		1px -1px 0 #292929,
@@ -1190,6 +1217,33 @@ screen and (max-height: 400px) {
 		margin-top: 3vh;
 	}
 
+	.shop {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		z-index: 1;
+		overflow: hidden;
+		margin-left: none;
+	}
+	
+	.shopimg {
+		height: 3vh;
+		margin-top: 3.5vh;
+		filter: saturate(100%);
+		filter: brightness(95%);
+		cursor: pointer;
+	}
+	
+	.shopimg:hover {
+		filter: contrast(85%);
+		filter: brightness(130%);
+		height: 3.5vh;
+		margin-top: 3vh;
+	}
+
 	.subscribe {
 		position: relative;
 		height: 100%;
@@ -1350,9 +1404,9 @@ screen and (max-height: 400px) {
 	}
 	
 	.bio h1 {
-		margin-top: 380px;
-		font-size: 20px;
-		word-spacing: 2px;
+		margin-top: 350px;
+		font-size: 18px;
+		word-spacing: 1px;
 		text-shadow: -1px 1px 0 #292929,
 		3px 3px 0 #292929,
 		1px -1px 0 #292929,
@@ -1478,7 +1532,7 @@ screen and (max-height: 400px) {
 	
 	.bio h1 {
 		margin-top: 280px;
-		font-size: 17px;
+		font-size: 14px;
 		word-spacing: 2px;
 	}
 	
@@ -1559,6 +1613,16 @@ screen and (max-height: 400px) {
 	}
 	
 	.aboutimg:hover {
+		height: 4vh;
+		margin-top: 3vh;
+	}
+
+	.shopimg {
+		height: 3.5vh;
+		margin-top: 3.5vh;
+	}
+	
+	.shopimg:hover {
 		height: 4vh;
 		margin-top: 3vh;
 	}
@@ -1672,8 +1736,8 @@ screen and (max-height: 400px) {
 	}
 	
 	.bio h1 {
-		font-size: 17px;
-		word-spacing: 2px;
+		font-size: 13px;
+		word-spacing: 1px;
 		text-shadow: -1px 1px 0 #292929,
 		2px 2px 0 #292929,
 		1px -1px 0 #292929,
@@ -1850,14 +1914,14 @@ screen and (max-height: 400px) {
 	.bio {
 		width: 330px;
 		height: 600px;
-		line-height: 25px;
+		line-height: 20px;
 		padding-left: 25px;
 		padding-right: 25px;
 	}
 	
 	.bio h1 {
 		margin-top: 265px;
-		font-size: 13.5px;
+		font-size: 12px;
 		word-spacing: 2px;
 		text-shadow: -1px 1px 0 #292929,
 		2px 2px 0 #292929,
@@ -1957,6 +2021,16 @@ screen and (max-height: 400px) {
 		margin-top: 4vh;
 	}
 
+	.shopimg {
+		height: 3vh;
+		margin-top: 4vh;
+	}
+
+	.shopimg:hover {
+		height: 3vh;
+		margin-top: 4vh;
+	}
+
 	.subscribeimg {
 		height: 3.1vh;
 		margin-top: 4vh;
@@ -1994,7 +2068,7 @@ screen and (max-height: 400px) {
 }
 
 @media screen and (max-width: 390px),
-	screen and (max-height: 00px) {
+	screen and (max-height: 400px) {
 	/*
 	.plane {
 		position: absolute;
@@ -2176,6 +2250,16 @@ screen and (max-height: 400px) {
 	}
 
 	.aboutimg:hover {
+		height: 3vh;
+		margin-top: 4vh;
+	}
+
+	.shopimg {
+		height: 3vh;
+		margin-top: 4vh;
+	}
+
+	.shopimg:hover {
 		height: 3vh;
 		margin-top: 4vh;
 	}
